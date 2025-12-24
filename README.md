@@ -5,7 +5,7 @@ Carte interactive recensant toutes les stations de ski MagicPass proposant des e
 ## 📋 Caractéristiques
 
 ### Stations Incluses
-- **15 stations de ski** partenaires MagicPass
+- **36 stations de ski** partenaires MagicPass
 - Régions: Fribourg, Vaud, Valais
 - Toutes avec accès hivernal garanti
 
@@ -65,26 +65,53 @@ Pour chaque station, vous trouverez:
 
 ### Stations Recensées
 
-1. **La Berra** (Fribourg) - 25 CHF/nuit
-2. **Moléson** (Gruyère) - 30 CHF/nuit
-3. **Les Paccots** (Vaud) - 20 CHF/nuit
-4. **Charmey** (Fribourg) - 22 CHF/nuit
-5. **Schwarzsee** (Fribourg) - 28 CHF/nuit
-6. **Les Pléiades** (Vaud) - 18 CHF/nuit
-7. **Jaun-Dorf** (Fribourg) - 24 CHF/nuit
-8. **Rathvel** (Fribourg) - 15 CHF/nuit
-9. **Villars-Gryon** (Vaud) - 35 CHF/nuit
-10. **Leysin** (Vaud) - 32 CHF/nuit
-11. **Les Mosses** (Vaud) - 26 CHF/nuit
-12. **La Lécherette** (Vaud) - 22 CHF/nuit
-13. **Château-d'Oex** (Vaud) - 28 CHF/nuit
-14. **Rougemont** (Vaud) - 25 CHF/nuit
-15. **Ovronnaz** (Valais) - 30 CHF/nuit
+#### Fribourg (7 stations)
+1. **La Berra** - 25 CHF/nuit - 25 places
+2. **Moléson** - 30 CHF/nuit - 15 places
+3. **Charmey** - 22 CHF/nuit - 12 places
+4. **Schwarzsee** - 28 CHF/nuit - 18 places
+5. **Jaun-Dorf** - 24 CHF/nuit - 15 places
+6. **Rathvel** - 15 CHF/nuit - 8 places
+
+#### Vaud (8 stations)
+7. **Les Paccots** - 20 CHF/nuit - 20 places
+8. **Les Pléiades** - 18 CHF/nuit - 10 places
+9. **Villars-Gryon** - 35 CHF/nuit - 30 places
+10. **Leysin** - 32 CHF/nuit - 22 places
+11. **Les Mosses** - 26 CHF/nuit - 20 places
+12. **La Lécherette** - 22 CHF/nuit - 12 places
+13. **Château-d'Oex** - 28 CHF/nuit - 16 places
+14. **Rougemont** - 25 CHF/nuit - 10 places
+
+#### Valais (21 stations)
+15. **Ovronnaz** - 30 CHF/nuit - 18 places
+16. **Anzère** - 32 CHF/nuit - 25 places
+17. **Nendaz** (4 Vallées) - 38 CHF/nuit - 35 places
+18. **Veysonnaz** (4 Vallées) - 35 CHF/nuit - 28 places
+19. **Thyon** (4 Vallées) - 36 CHF/nuit - 30 places
+20. **La Tzoumaz** (4 Vallées) - 30 CHF/nuit - 20 places
+21. **Champéry** (Portes du Soleil) - 40 CHF/nuit - 40 places
+22. **Morgins** (Portes du Soleil) - 36 CHF/nuit - 32 places
+23. **Torgon** (Portes du Soleil) - 32 CHF/nuit - 24 places
+24. **Champoussin** (Portes du Soleil) - 28 CHF/nuit - 18 places
+25. **Les Crosets** (Portes du Soleil) - 34 CHF/nuit - 22 places
+26. **Grimentz** (Val d'Anniviers) - 33 CHF/nuit - 26 places
+27. **Saint-Luc** (Val d'Anniviers) - 30 CHF/nuit - 20 places
+28. **Chandolin** (Val d'Anniviers) - 28 CHF/nuit - 15 places
+29. **Vercorin** - 29 CHF/nuit - 22 places
+30. **Grächen** - 34 CHF/nuit - 30 places
+31. **Saas-Grund** - 32 CHF/nuit - 28 places
+32. **Bellwald** (Goms) - 26 CHF/nuit - 20 places
+33. **Blatten-Belalp** (Aletsch) - 30 CHF/nuit - 24 places
+34. **Unterbäch** - 27 CHF/nuit - 16 places
+35. **Bruson** (4 Vallées) - 28 CHF/nuit - 18 places
+36. **Evolène** (Val d'Hérens) - 25 CHF/nuit - 14 places
 
 ### Tarifs Moyens
-- **Prix moyen**: 25 CHF/nuit
+- **Prix moyen**: 29 CHF/nuit
 - **Prix minimum**: 15 CHF/nuit (Rathvel)
-- **Prix maximum**: 35 CHF/nuit (Villars-Gryon)
+- **Prix maximum**: 40 CHF/nuit (Champéry)
+- **Capacité totale**: ~780 places de camping-car
 
 ## 🛠️ Technologies Utilisées
 

@@ -5,7 +5,7 @@ Carte interactive recensant toutes les stations de ski MagicPass proposant des e
 ## 📋 Caractéristiques
 
 ### Stations Incluses
-- **36 stations de ski** partenaires MagicPass
+- **37 stations de ski** partenaires MagicPass
 - Régions: Fribourg, Vaud, Valais
 - Toutes avec accès hivernal garanti
 
@@ -83,7 +83,7 @@ Pour chaque station, vous trouverez:
 13. **Château-d'Oex** - 28 CHF/nuit - 16 places
 14. **Rougemont** - 25 CHF/nuit - 10 places
 
-#### Valais (21 stations)
+#### Valais (22 stations)
 15. **Ovronnaz** - 30 CHF/nuit - 18 places
 16. **Anzère** - 32 CHF/nuit - 25 places
 17. **Nendaz** (4 Vallées) - 38 CHF/nuit - 35 places
@@ -100,18 +100,19 @@ Pour chaque station, vous trouverez:
 28. **Chandolin** (Val d'Anniviers) - 28 CHF/nuit - 15 places
 29. **Vercorin** - 29 CHF/nuit - 22 places
 30. **Grächen** - 34 CHF/nuit - 30 places
-31. **Saas-Grund** - 32 CHF/nuit - 28 places
-32. **Bellwald** (Goms) - 26 CHF/nuit - 20 places
-33. **Blatten-Belalp** (Aletsch) - 30 CHF/nuit - 24 places
-34. **Unterbäch** - 27 CHF/nuit - 16 places
-35. **Bruson** (4 Vallées) - 28 CHF/nuit - 18 places
-36. **Evolène** (Val d'Hérens) - 25 CHF/nuit - 14 places
+31. **Saas-Fee** (Saastal) - 38 CHF/nuit - 45 places
+32. **Saas-Grund** (Saastal) - 32 CHF/nuit - 28 places
+33. **Bellwald** (Goms) - 26 CHF/nuit - 20 places
+34. **Blatten-Belalp** (Aletsch) - 30 CHF/nuit - 24 places
+35. **Unterbäch** - 27 CHF/nuit - 16 places
+36. **Bruson** (4 Vallées) - 28 CHF/nuit - 18 places
+37. **Evolène** (Val d'Hérens) - 25 CHF/nuit - 14 places
 
 ### Tarifs Moyens
 - **Prix moyen**: 29 CHF/nuit
 - **Prix minimum**: 15 CHF/nuit (Rathvel)
 - **Prix maximum**: 40 CHF/nuit (Champéry)
-- **Capacité totale**: ~780 places de camping-car
+- **Capacité totale**: ~825 places de camping-car
 
 ## 🛠️ Technologies Utilisées
 

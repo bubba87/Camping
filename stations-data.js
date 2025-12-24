@@ -662,6 +662,28 @@ const skiStations = [
     },
     {
         id: 31,
+        name: "Saas-Fee",
+        region: "Valais - Saastal",
+        lat: 46.1089,
+        lng: 7.9281,
+        rvParking: {
+            available: true,
+            capacity: 45,
+            winterAccess: true,
+            price: 38,
+            amenities: ["electricity", "water", "waste", "toilets", "wifi", "shower"],
+            address: "Parkhaus Alpin Express, 3906 Saas-Fee",
+            contact: "+41 27 958 18 58",
+            notes: "Perle des Alpes, village sans voiture, parking moderne"
+        },
+        skiResort: {
+            altitude: "1800-3600m",
+            pistes: "100km",
+            magicPass: true
+        }
+    },
+    {
+        id: 32,
         name: "Saas-Grund",
         region: "Valais - Saastal",
         lat: 46.1247,
@@ -683,7 +705,7 @@ const skiStations = [
         }
     },
     {
-        id: 32,
+        id: 33,
         name: "Bellwald",
         region: "Valais - Goms",
         lat: 46.4256,
@@ -705,7 +727,7 @@ const skiStations = [
         }
     },
     {
-        id: 33,
+        id: 34,
         name: "Blatten-Belalp",
         region: "Valais - Aletsch",
         lat: 46.4172,
@@ -727,7 +749,7 @@ const skiStations = [
         }
     },
     {
-        id: 34,
+        id: 35,
         name: "Unterbäch",
         region: "Valais",
         lat: 46.2800,
@@ -749,7 +771,7 @@ const skiStations = [
         }
     },
     {
-        id: 35,
+        id: 36,
         name: "Bruson",
         region: "Valais - 4 Vallées",
         lat: 46.0717,
@@ -771,7 +793,7 @@ const skiStations = [
         }
     },
     {
-        id: 36,
+        id: 37,
         name: "Evolène",
         region: "Valais - Val d'Hérens",
         lat: 46.1153,

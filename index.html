@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stations de Ski MagicPass - Emplacements Camping-Car</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header h1 {
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .container {
+            display: flex;
+            height: calc(100vh - 100px);
+        }
+
+        .sidebar {
+            width: 350px;
+            background: white;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .filters {
+            margin-bottom: 20px;
+        }
+
+        .filter-group {
+            margin-bottom: 15px;
+        }
+
+        .filter-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .filter-group select,
+        .filter-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .station-list {
+            margin-top: 20px;
+        }
+
+        .station-item {
+            background: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-left: 4px solid #667eea;
+        }
+
+        .station-item:hover {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transform: translateX(5px);
+        }
+
+        .station-item h3 {
+            color: #667eea;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .station-item .price {
+            color: #28a745;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .station-item .amenities {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        #map {
+            flex: 1;
+            height: 100%;
+        }
+
+        .leaflet-popup-content {
+            margin: 15px;
+            line-height: 1.6;
+        }
+
+        .popup-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .popup-section {
+            margin: 10px 0;
+        }
+
+        .popup-section strong {
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .popup-price {
+            background: #28a745;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .popup-amenities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 8px;
+        }
+
+        .amenity-tag {
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #495057;
+        }
+
+        .legend {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .legend h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+            font-size: 13px;
+        }
+
+        .legend-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .icon-available {
+            background: #28a745;
+        }
+
+        .icon-limited {
+            background: #ffc107;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: 300px;
+            }
+
+            #map {
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏔️ Stations de Ski MagicPass - Emplacements Camping-Car</h1>
+        <p>Trouvez les meilleures stations avec parking camping-car en hiver</p>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <div class="legend">
+                <h3>Légende</h3>
+                <div class="legend-item">
+                    <div class="legend-icon icon-available"></div>
+                    <span>Places disponibles</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-icon icon-limited"></div>
+                    <span>Places limitées</span>
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label>Rechercher une station</label>
+                    <input type="text" id="searchInput" placeholder="Nom de la station...">
+                </div>
+
+                <div class="filter-group">
+                    <label>Prix maximum (CHF/nuit)</label>
+                    <select id="priceFilter">
+                        <option value="all">Tous les prix</option>
+                        <option value="20">Jusqu'à 20 CHF</option>
+                        <option value="30">Jusqu'à 30 CHF</option>
+                        <option value="40">Jusqu'à 40 CHF</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Commodités</label>
+                    <select id="amenityFilter">
+                        <option value="all">Toutes</option>
+                        <option value="electricity">Électricité</option>
+                        <option value="water">Eau</option>
+                        <option value="waste">Vidange</option>
+                        <option value="wifi">WiFi</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="station-list" id="stationList"></div>
+        </div>
+
+        <div id="map"></div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script src="stations-data.js"></script>
+    <script src="map.js"></script>
+</body>
+</html>

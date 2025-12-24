@@ -51,6 +51,9 @@ function createPopupContent(station) {
         .map(amenity => `<span class="amenity-tag">${amenitiesIcons[amenity] || amenity}</span>`)
         .join('');
 
+    // Extraire le nom du parking de l'adresse (première partie avant la virgule)
+    const parkingName = station.rvParking.address.split(',')[0];
+
     return `
         <div class="popup-title">${station.name}</div>
 
@@ -70,8 +73,15 @@ function createPopupContent(station) {
         </div>
 
         <div class="popup-section">
-            <strong>🚐 Parking Camping-Car:</strong>
-            <div>Capacité: ${station.rvParking.capacity} places</div>
+            <strong>🚐 Emplacement Camping-Car:</strong>
+            <div style="background: #f8f9fa; padding: 8px; border-radius: 4px; margin-top: 5px;">
+                <div style="font-weight: 600; color: #667eea; margin-bottom: 4px;">${parkingName}</div>
+                <div style="font-size: 13px;">${station.rvParking.address}</div>
+                <div style="font-size: 12px; color: #666; margin-top: 4px;">
+                    📌 GPS: ${station.lat.toFixed(4)}°N, ${station.lng.toFixed(4)}°E
+                </div>
+            </div>
+            <div style="margin-top: 5px;">Capacité: ${station.rvParking.capacity} places</div>
             <div>Accès hivernal: ${station.rvParking.winterAccess ? '✓ Ouvert' : '✗ Fermé'}</div>
         </div>
 
@@ -80,11 +90,6 @@ function createPopupContent(station) {
             <div class="popup-amenities">
                 ${amenitiesList}
             </div>
-        </div>
-
-        <div class="popup-section">
-            <strong>📍 Adresse:</strong>
-            <div style="font-size: 13px;">${station.rvParking.address}</div>
         </div>
 
         <div class="popup-section">
@@ -145,13 +150,21 @@ function updateStationList(stations) {
             .map(amenity => amenitiesIcons[amenity])
             .join(' ');
 
+        const parkingName = station.rvParking.address.split(',')[0];
+
         return `
             <div class="station-item" onclick="focusStation(${station.id})">
                 <h3>${station.name}</h3>
                 <div style="font-size: 13px; color: #666;">📍 ${station.region}</div>
                 <div class="price">${station.rvParking.price} CHF/nuit</div>
+                <div style="font-size: 12px; color: #555; margin: 5px 0; font-weight: 500;">
+                    🅿️ ${parkingName}
+                </div>
                 <div class="amenities">
                     🚐 ${station.rvParking.capacity} places | ${amenitiesText}
+                </div>
+                <div style="font-size: 11px; color: #888; margin-top: 5px;">
+                    📌 ${station.lat.toFixed(4)}°N, ${station.lng.toFixed(4)}°E
                 </div>
             </div>
         `;
@@ -169,9 +182,18 @@ function focusStation(stationId) {
     }
 }
 
+// Extraire le canton d'une région
+function getCanton(region) {
+    if (region.includes('Fribourg') || region.includes('Gruyère')) return 'Fribourg';
+    if (region.includes('Vaud')) return 'Vaud';
+    if (region.includes('Valais')) return 'Valais';
+    return 'Autre';
+}
+
 // Filtrer les stations
 function filterStations() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const canton = document.getElementById('cantonFilter').value;
     const maxPrice = document.getElementById('priceFilter').value;
     const amenity = document.getElementById('amenityFilter').value;
 
@@ -180,13 +202,17 @@ function filterStations() {
         const matchesSearch = station.name.toLowerCase().includes(searchTerm) ||
                             station.region.toLowerCase().includes(searchTerm);
 
+        // Filtre de canton
+        const stationCanton = getCanton(station.region);
+        const matchesCanton = canton === 'all' || stationCanton === canton;
+
         // Filtre de prix
         const matchesPrice = maxPrice === 'all' || station.rvParking.price <= parseInt(maxPrice);
 
         // Filtre de commodités
         const matchesAmenity = amenity === 'all' || station.rvParking.amenities.includes(amenity);
 
-        return matchesSearch && matchesPrice && matchesAmenity;
+        return matchesSearch && matchesCanton && matchesPrice && matchesAmenity;
     });
 
     addMarkers(filteredStations);
@@ -204,6 +230,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initMap();
 
     document.getElementById('searchInput').addEventListener('input', filterStations);
+    document.getElementById('cantonFilter').addEventListener('change', filterStations);
     document.getElementById('priceFilter').addEventListener('change', filterStations);
     document.getElementById('amenityFilter').addEventListener('change', filterStations);
 });

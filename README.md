@@ -37,6 +37,7 @@ Pour chaque station, vous trouverez:
 
 ### Recherche et Filtres
 - **Recherche par nom** de station ou région
+- **Filtre par canton** (Fribourg, Vaud, Valais)
 - **Filtre par prix** (jusqu'à 20, 30 ou 40 CHF/nuit)
 - **Filtre par commodités** (électricité, eau, vidange, WiFi)
 
@@ -44,9 +45,16 @@ Pour chaque station, vous trouverez:
 - **Marqueurs colorés** selon la capacité:
   - 🟢 Vert: Plus de 15 places disponibles
   - 🟡 Jaune: Places limitées (moins de 15)
-- **Popups détaillés** avec toutes les informations
-- **Liste latérale** avec les stations filtrées
-- **Clic sur une station** pour centrer la carte
+- **Popups détaillés** avec toutes les informations:
+  - Nom et adresse du parking camping-car
+  - Coordonnées GPS précises
+  - Tarifs et commodités
+  - Contact et informations pratiques
+- **Liste latérale** avec aperçu rapide:
+  - Nom du parking
+  - Coordonnées GPS
+  - Capacité et prix
+- **Clic sur une station** pour centrer la carte et voir les détails
 
 ## 🚀 Utilisation
 

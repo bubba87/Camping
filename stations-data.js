@@ -121,7 +121,7 @@ const skiStations = [
             capacity: 10,
             winterAccess: true,
             price: 18,
-            amenities: ["toilets"],
+            amenities: ["electricity", "toilets"],
             address: "Lally, 1808 Les Monts-de-Corsier",
             contact: "+41 21 921 05 38",
             notes: "Petit domaine familial, parking simple"
@@ -165,7 +165,7 @@ const skiStations = [
             capacity: 8,
             winterAccess: true,
             price: 15,
-            amenities: ["toilets"],
+            amenities: ["electricity", "toilets"],
             address: "Rathvel, 3280 Murten",
             contact: "+41 26 670 99 88",
             notes: "Petit domaine, idéal pour familles"

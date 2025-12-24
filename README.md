@@ -73,7 +73,7 @@ Pour chaque station, vous trouverez:
 
 ### Stations Recensées
 
-#### Fribourg (7 stations)
+#### Fribourg (6 stations)
 1. **La Berra** - 25 CHF/nuit - 25 places
 2. **Moléson** - 30 CHF/nuit - 15 places
 3. **Charmey** - 22 CHF/nuit - 12 places
@@ -91,7 +91,7 @@ Pour chaque station, vous trouverez:
 13. **Château-d'Oex** - 28 CHF/nuit - 16 places
 14. **Rougemont** - 25 CHF/nuit - 10 places
 
-#### Valais (22 stations)
+#### Valais (23 stations)
 15. **Ovronnaz** - 30 CHF/nuit - 18 places
 16. **Anzère** - 32 CHF/nuit - 25 places
 17. **Nendaz** (4 Vallées) - 38 CHF/nuit - 35 places

@@ -193,7 +193,8 @@ function getCanton(region) {
 // Filtrer les stations
 function filterStations() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    const canton = document.getElementById('cantonFilter').value;
+    const cantonFilter = document.getElementById('cantonFilter');
+    const canton = cantonFilter ? cantonFilter.value : 'all';
     const maxPrice = document.getElementById('priceFilter').value;
     const amenity = document.getElementById('amenityFilter').value;
 
@@ -222,6 +223,9 @@ function filterStations() {
     if (filteredStations.length > 0) {
         const bounds = L.latLngBounds(filteredStations.map(s => [s.lat, s.lng]));
         map.fitBounds(bounds, { padding: [50, 50] });
+    } else {
+        // Si aucune station ne correspond, revenir à la vue par défaut
+        map.setView([46.5, 7.1], 9);
     }
 }
 

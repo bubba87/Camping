@@ -129,6 +129,12 @@ function addMarkers(stations) {
 // Mettre à jour la liste des stations dans la sidebar
 function updateStationList(stations) {
     const listContainer = document.getElementById('stationList');
+    const stationCount = document.getElementById('stationCount');
+
+    // Mettre à jour le compteur
+    if (stationCount) {
+        stationCount.textContent = stations.length;
+    }
 
     if (stations.length === 0) {
         listContainer.innerHTML = '<p style="text-align: center; color: #999; padding: 20px;">Aucune station trouvée</p>';
@@ -177,8 +183,13 @@ function focusStation(stationId) {
     const marker = markers.find(m => m.stationId === stationId);
 
     if (station && marker) {
-        map.setView([station.lat, station.lng], 12);
+        map.setView([station.lat, station.lng], 13);
         marker.openPopup();
+
+        // Sur mobile, basculer vers l'onglet carte
+        if (window.innerWidth <= 768) {
+            switchTab('map');
+        }
     }
 }
 
@@ -226,6 +237,33 @@ function filterStations() {
     } else {
         // Si aucune station ne correspond, revenir à la vue par défaut
         map.setView([46.5, 7.1], 9);
+    }
+}
+
+// Changer d'onglet (pour mobile)
+function switchTab(tab) {
+    const sidebar = document.querySelector('.sidebar');
+    const mapElement = document.getElementById('map');
+    const tabButtons = document.querySelectorAll('.tab-button');
+
+    // Retirer la classe active de tous les boutons
+    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+    if (tab === 'list') {
+        sidebar.classList.add('active');
+        mapElement.classList.remove('active');
+        tabButtons[0].classList.add('active');
+    } else {
+        sidebar.classList.remove('active');
+        mapElement.classList.add('active');
+        tabButtons[1].classList.add('active');
+
+        // Forcer Leaflet à recalculer la taille de la carte
+        setTimeout(() => {
+            if (map) {
+                map.invalidateSize();
+            }
+        }, 100);
     }
 }
 

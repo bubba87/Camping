@@ -41,6 +41,44 @@
         .container {
             display: flex;
             height: calc(100vh - 100px);
+            position: relative;
+        }
+
+        .tabs {
+            display: none;
+            background: white;
+            border-bottom: 2px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .tab-buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .tab-button {
+            flex: 1;
+            padding: 15px;
+            background: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-button.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            background: #f8f9fa;
+        }
+
+        .tab-button:hover {
+            background: #f8f9fa;
         }
 
         .sidebar {
@@ -167,6 +205,16 @@
             color: #495057;
         }
 
+        /* Amélioration des popups sur mobile */
+        .leaflet-popup-content-wrapper {
+            border-radius: 8px;
+        }
+
+        .leaflet-popup-content {
+            margin: 12px !important;
+            max-width: 280px;
+        }
+
         .legend {
             background: white;
             padding: 15px;
@@ -204,17 +252,112 @@
         }
 
         @media (max-width: 768px) {
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .header p {
+                font-size: 12px;
+            }
+
+            .tabs {
+                display: block;
+            }
+
             .container {
                 flex-direction: column;
+                height: calc(100vh - 150px);
             }
 
             .sidebar {
                 width: 100%;
-                height: 300px;
+                height: 100%;
+                display: none;
+                padding: 15px;
+                box-shadow: none;
+            }
+
+            .sidebar.active {
+                display: block;
             }
 
             #map {
-                height: 400px;
+                width: 100%;
+                height: 100%;
+                display: none;
+            }
+
+            #map.active {
+                display: block;
+            }
+
+            .station-item {
+                padding: 12px;
+                margin-bottom: 8px;
+            }
+
+            .filter-group {
+                margin-bottom: 12px;
+            }
+
+            .filter-group label {
+                font-size: 13px;
+            }
+
+            .filter-group select,
+            .filter-group input {
+                padding: 8px;
+                font-size: 13px;
+            }
+
+            .legend {
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+
+            .legend h3 {
+                font-size: 13px;
+            }
+
+            .station-count {
+                padding: 10px;
+                background: #667eea;
+                color: white;
+                text-align: center;
+                font-weight: 600;
+                border-radius: 6px;
+                margin-bottom: 15px;
+            }
+
+            .leaflet-popup-content {
+                margin: 10px !important;
+                max-width: 250px;
+                font-size: 13px;
+            }
+
+            .popup-title {
+                font-size: 16px;
+            }
+
+            .popup-price {
+                padding: 6px 10px;
+                font-size: 13px;
+            }
+
+            /* Améliorer le touch sur les boutons d'onglets */
+            .tab-button {
+                padding: 12px;
+                font-size: 14px;
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            /* Éviter le zoom accidentel sur les inputs */
+            input, select {
+                font-size: 16px !important;
+            }
+
+            .station-item h3 {
+                font-size: 15px;
             }
         }
     </style>
@@ -225,8 +368,19 @@
         <p>Trouvez les meilleures stations avec parking camping-car en hiver</p>
     </div>
 
+    <div class="tabs">
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="switchTab('list')">
+                📋 Liste (<span id="stationCount">37</span>)
+            </button>
+            <button class="tab-button" onclick="switchTab('map')">
+                🗺️ Carte
+            </button>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="sidebar">
+        <div class="sidebar active">
             <div class="legend">
                 <h3>Légende</h3>
                 <div class="legend-item">

@@ -130,11 +130,32 @@ Pour chaque station, vous trouverez:
 - **Leaflet.js** - Bibliothèque de cartographie open-source
 - **OpenStreetMap** - Données cartographiques
 
-## 📱 Responsive Design
+## 📱 Optimisation Mobile
 
-L'application s'adapte automatiquement à tous les écrans:
-- 💻 Desktop: Vue complète avec sidebar
-- 📱 Mobile: Vue empilée optimisée
+L'application est entièrement optimisée pour mobile avec:
+
+### Navigation par Onglets
+- **📋 Onglet Liste**: Affiche la liste des stations avec filtres
+  - Compteur dynamique du nombre de stations affichées
+  - Scroll fluide avec toutes les informations
+  - Tap sur une station pour voir sa position sur la carte
+
+- **🗺️ Onglet Carte**: Affiche la carte interactive
+  - Carte plein écran pour une meilleure visibilité
+  - Zoom et navigation tactiles
+  - Popups optimisés pour petits écrans
+
+### Fonctionnalités Mobile
+- ✅ **Auto-switch**: Tap sur une station → bascule automatiquement vers la carte
+- ✅ **Touch-friendly**: Boutons et contrôles optimisés pour le tactile
+- ✅ **Pas de zoom accidentel**: Les champs de saisie ne déclenchent pas de zoom
+- ✅ **Interface adaptative**: Tailles de police et espacements ajustés
+- ✅ **Performance**: Chargement rapide et navigation fluide
+
+### Compatibilité
+- 💻 **Desktop**: Vue côte à côte (liste + carte)
+- 📱 **Mobile/Tablette**: Système d'onglets pour une navigation optimale
+- 🌐 **Tous navigateurs**: Compatible Chrome, Safari, Firefox, Edge
 
 ## 📝 Structure des Fichiers
 

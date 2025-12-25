@@ -4,9 +4,11 @@ let markers = [];
 let filteredStations = [];
 let greenIcon, yellowIcon;
 
-// Initialiser filteredStations après chargement
+// Initialiser filteredStations après chargement et trier par ordre alphabétique
 if (typeof skiStations !== 'undefined') {
-    filteredStations = [...skiStations];
+    filteredStations = [...skiStations].sort((a, b) =>
+        a.name.localeCompare(b.name, 'fr', { sensitivity: 'base' })
+    );
 } else {
     console.error('skiStations n\'est pas défini');
 }
@@ -167,7 +169,12 @@ function updateStationList(stations) {
         return;
     }
 
-    listContainer.innerHTML = stations.map(station => {
+    // Trier les stations par ordre alphabétique
+    const sortedStations = [...stations].sort((a, b) =>
+        a.name.localeCompare(b.name, 'fr', { sensitivity: 'base' })
+    );
+
+    listContainer.innerHTML = sortedStations.map(station => {
         const amenitiesIcons = {
             electricity: '⚡',
             water: '💧',
@@ -252,6 +259,11 @@ function filterStations() {
 
         return matchesSearch && matchesCanton && matchesPrice && matchesAmenity;
     });
+
+    // Trier les stations filtrées par ordre alphabétique
+    filteredStations.sort((a, b) =>
+        a.name.localeCompare(b.name, 'fr', { sensitivity: 'base' })
+    );
 
     addMarkers(filteredStations);
     updateStationList(filteredStations);

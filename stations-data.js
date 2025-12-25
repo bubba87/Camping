@@ -29,18 +29,18 @@ const skiStations = [
         id: 2,
         name: "Moléson",
         region: "Fribourg - Gruyère",
-        lat: 46.5445,
-        lng: 7.0189,
+        lat: 46.56128,
+        lng: 7.03820,
         rvParking: {
             available: true,
             capacity: 15,
             winterAccess: true,
             price: 30,
             amenities: ["electricity", "water", "waste", "toilets", "wifi"],
-            address: "Plan-Francey, 1663 Moléson-sur-Gruyères",
+            address: "Parking Funiculaire, Route du Moléson 228, 1663 Moléson-sur-Gruyères",
             contact: "+41 26 921 29 29",
-            notes: "Accès par funiculaire, parking au village",
-            shortDesc: "Parking au village, accès funiculaire, cadre pittoresque de Gruyère"
+            notes: "Grand parking funiculaire 600 places, gratuit hors saison, à 5km de Gruyères",
+            shortDesc: "Grand parking funiculaire au pied des pistes, accès direct télécabine"
         },
         skiResort: {
             altitude: "1100-2002m",
@@ -75,18 +75,18 @@ const skiStations = [
         id: 4,
         name: "Charmey",
         region: "Fribourg - Gruyère",
-        lat: 46.6189,
-        lng: 7.1623,
+        lat: 46.6183,
+        lng: 7.1693,
         rvParking: {
             available: true,
-            capacity: 12,
+            capacity: 10,
             winterAccess: true,
-            price: 20,
+            price: 19,
             amenities: ["electricity", "water", "waste", "toilets"],
-            address: "Parking Télécabine, 1637 Charmey",
+            address: "Aire camping-car, 7 Les Charrières, 1637 Charmey",
             contact: "+41 26 927 15 15",
-            notes: "Parking près de la télécabine, accès bains thermaux",
-            shortDesc: "Parking télécabine, proche des bains thermaux de Charmey"
+            notes: "19 CHF pour 2 pers + bon 20 CHF commerces. Service eau/vidange/élec (5 CHF token 100L ou 6h élec). Télécabine 50m",
+            shortDesc: "Aire camping-car à 50m de la télécabine, bon 20 CHF inclus"
         },
         skiResort: {
             altitude: "900-1730m",
@@ -192,8 +192,8 @@ const skiStations = [
         id: 9,
         name: "Château-d'Oex",
         region: "Vaud - Pays-d'Enhaut",
-        lat: 46.4756,
-        lng: 7.1334,
+        lat: 46.4669137,
+        lng: 7.124832,
         rvParking: {
             available: true,
             capacity: 25,
@@ -202,8 +202,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "shower"],
             address: "Camping Le Berceau, Route des Mosses 16, 1660 Château-d'Oex",
             contact: "+41 26 924 62 34",
-            notes: "Camping ouvert toute l'année: 15 CHF emplacement + 9 CHF/adulte + 3 CHF taxe + 4 CHF électricité = 31 CHF total",
-            shortDesc: "Camping 4 saisons, accès piscine gratuit, village des montgolfières"
+            notes: "Camping 3★ ouvert toute l'année, au bord de la Sarine. 15 CHF emplacement + 9 CHF/adulte + 3 CHF taxe + 4 CHF élec = 31 CHF total",
+            shortDesc: "Camping 3★ au bord de la Sarine, piscine gratuite, village des montgolfières"
         },
         skiResort: {
             altitude: "1000-1628m",
@@ -378,18 +378,18 @@ const skiStations = [
         id: 17,
         name: "Blatten-Belalp",
         region: "Valais - Naters",
-        lat: 46.3723,
-        lng: 7.9823,
+        lat: 46.364714,
+        lng: 7.989872,
         rvParking: {
             available: true,
-            capacity: 10,
+            capacity: 200,
             winterAccess: true,
-            price: 20,
+            price: 5,
             amenities: ["electricity", "water"],
-            address: "Park'n'Sleep Rischinu, Rischinerwald, 3914 Blatten b. Naters",
+            address: "Parkplatz Rischinen, Rischinustrasse, 3914 Blatten b. Naters",
             contact: "+41 27 921 60 40",
-            notes: "Nouvelle station Magic Pass 2025-26, navette gratuite vers télécabine en hiver",
-            shortDesc: "Park'n'Sleep en forêt, navette gratuite vers télécabine"
+            notes: "Nouvelle station Magic Pass 2025-26. Grand parking 200 places, 5 CHF/jour, Sportbus GRATUIT vers télécabine en hiver",
+            shortDesc: "Grand parking Rischinen 200 places en forêt, bus gratuit vers télécabine"
         },
         skiResort: {
             altitude: "1322-3118m",

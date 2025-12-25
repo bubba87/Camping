@@ -5,10 +5,11 @@ Carte interactive recensant les stations de ski **MagicPass 2025-2026** proposan
 ## 📋 Caractéristiques
 
 ### Stations Incluses
-- **17 stations de ski** partenaires MagicPass 2025-2026
-- Régions: Fribourg (5), Vaud (5), Valais (7)
+- **18 stations de ski** partenaires MagicPass 2025-2026
+- Régions: Fribourg (5), Vaud (5), Valais (8)
 - **Toutes avec accès hivernal garanti pour camping-cars**
 - Équipements et services hivernaux confirmés
+- **Coordonnées GPS pointant vers les parkings camping-car**
 
 ### Informations Disponibles
 
@@ -90,29 +91,32 @@ Pour chaque station, vous trouverez:
 9. **Château-d'Oex** - 24 CHF/nuit - 25 places - Camping Le Berceau (15+9+3+4 CHF)
 10. **Les Pléiades** - 10 CHF/nuit - 8 places - Parking panoramique vue Léman
 
-#### Valais (7 stations)
+#### Valais (8 stations)
 11. **Anzère** - 6 CHF/nuit - 15 places - Parking de l'Avenir (taxe séjour 5.50 CHF/pers)
 12. **Ovronnaz** - 25 CHF/nuit - 20 places - Parking Central, accès bains thermaux
 13. **Grimentz** - 30 CHF/nuit - 26 places - Les Bouesses, carte Anniviers Liberté
 14. **Saint-Luc** - 30 CHF/nuit - 18 places - Chandolin Echertès, carte Anniviers Liberté
-15. **Saas-Fee** - 37 CHF/nuit - 45 places - Parkhaus Alpin Express P4 (30+7 CHF)
-16. **Blatten-Belalp** - 20 CHF/nuit - 10 places - Park'n'Sleep Rischinu (NOUVEAU 2025-26)
-17. **Unterbäch** - 30 CHF/nuit - 5 places - Seepark Augstbord (30 CHF pour 2 pers)
+15. **Saas-Fee** - 37 CHF/nuit - 45 places - Parkhaus P4 (30+7 CHF)
+16. **Saas-Almagell** - 9 CHF/nuit - 60 places - Parking Bilgersche (9 CHF pour 2 pers)
+17. **Blatten-Belalp** - 20 CHF/nuit - 10 places - Park'n'Sleep Rischinu (NOUVEAU 2025-26)
+18. **Unterbäch** - 30 CHF/nuit - 5 places - Seepark Augstbord (30 CHF pour 2 pers)
 
 ### Tarifs Moyens
-- **Prix moyen**: 23 CHF/nuit
-- **Prix minimum**: 6 CHF/nuit (Anzère - hors taxe séjour)
-- **Prix maximum**: 43 CHF/nuit (Schwarzsee)
-- **Capacité totale**: ~267 places de camping-car
+- **Prix moyen**: 22 CHF/nuit
+- **Prix minimum**: 6 CHF/nuit (Anzère parking, hors taxe séjour 5.50 CHF/adulte)
+- **Meilleur rapport qualité/prix**: 9 CHF/nuit (Saas-Almagell pour 2 pers taxes incluses)
+- **Prix maximum**: 43 CHF/nuit (Schwarzsee camping)
+- **Capacité totale**: ~327 places de camping-car
 
-### Notes Importantes
+### Notes Importantes sur les Prix
 - Les prix indiqués peuvent inclure ou non les taxes de séjour selon les stations
-- **Gryon/Villars**: Hiver uniquement aire de Barboleuse (15 CHF avec 2 taxes incluses)
-- **Leysin**: Prix total 10 CHF + 3.80 CHF/personne, max 5 nuits
-- **Anzère**: Taxe de séjour en plus (5.50 CHF/adulte, 2.75 CHF/enfant)
-- **Saas-Fee**: Taxe de séjour obligatoire pour SaastalCard
+- **Anzère**: 6 CHF parking + taxe séjour 5.50 CHF/adulte, 2.75 CHF/enfant = ~12 CHF total
+- **Saas-Almagell**: 9 CHF pour 2 pers taxes incluses - MEILLEUR PRIX! 60 places
+- **Gryon/Villars**: Hiver uniquement aire de Barboleuse, 2-3 places (travaux), 15 CHF pour 2 pers taxes incluses + 2 CHF élec
+- **Leysin**: 10 CHF + 3.80 CHF/personne = ~14 CHF total, max 5 nuits
+- **Saas-Fee**: 30 CHF parking + 7 CHF/personne pour SaastalCard (obligatoire) = ~37 CHF total
 - **Grimentz & Saint-Luc**: 30 CHF/jour en hiver, taxe incluse + carte Anniviers Liberté
-- **Château-d'Oex**: Détail: 15 CHF emplacement + 9 CHF/adulte + 3 CHF taxe + 4 CHF électricité
+- **Château-d'Oex**: 15 CHF emplacement + 9 CHF/adulte + 3 CHF taxe + 4 CHF élec = 31 CHF total
 
 ## 🛠️ Technologies Utilisées
 
@@ -203,14 +207,18 @@ Pour ajouter une nouvelle station, modifiez `stations-data.js`:
 - Les **coordonnées GPS** pointent vers les parkings camping-car, pas les sommets
 
 ### Stations NON Incluses
-Les stations suivantes ne sont **PAS dans MagicPass 2025-2026**:
+
+**Stations NON Magic Pass 2025-2026**:
 - ❌ 4 Vallées (Nendaz, Veysonnaz, Thyon, La Tzoumaz, Bruson)
 - ❌ Portes du Soleil (Champéry, Morgins, Torgon, Champoussin, Les Crosets)
-- ❌ Grächen, Bellwald, Vercorin, Evolène/Arolla
+- ❌ **Saas-Grund** (Hohsaas Bergbahnen) - attention: Saas-Fee et Saas-Almagell SONT Magic Pass!
+- ❌ Grächen, Bellwald
 
-Les stations suivantes n'ont **PAS d'équipement hivernal**:
-- ❌ Jaun (fermé en hiver)
-- ❌ Les Diablerets (Lac Retaud mai-octobre seulement)
+**Stations Magic Pass SANS équipement hivernal camping-car confirmé**:
+- ⚠️ Vercorin (parking télécabine 5h max, pas de stationnement nuit confirmé)
+- ⚠️ Evolène/Arolla (camping été, interdit hiver hors camping, amende 500 CHF)
+- ⚠️ Jaun (aire camping-car fermée en hiver)
+- ⚠️ Les Diablerets (Lac Retaud ouvert mai-octobre uniquement)
 
 ### Conseils
 - Arrivez tôt pour garantir une place

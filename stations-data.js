@@ -1,22 +1,23 @@
 // Données des stations de ski MagicPass 2025-2026 avec emplacements camping-car HIVER
+// COORDONNÉES GPS = PARKING CAMPING-CAR (pas les sommets!)
 const skiStations = [
     // ========== FRIBOURG (5 stations) ==========
     {
         id: 1,
         name: "La Berra",
         region: "Fribourg",
-        lat: 46.6756,
-        lng: 7.0917,
+        lat: 46.68646,
+        lng: 7.15432,
         rvParking: {
             available: true,
             capacity: 25,
             winterAccess: true,
             price: 25,
             amenities: ["electricity", "water", "waste", "toilets"],
-            address: "Parking P1, La Berra, 1669 Les Sciernes-d'Albeuve",
+            address: "Le Brandt, 1634 La Roche FR",
             contact: "+41 26 928 14 80",
-            notes: "Parking directement aux pieds des pistes",
-            shortDesc: "Grand parking sécurisé au pied des pistes, accès facile toute l'année"
+            notes: "Parking près du téléphérique, calme la nuit, 5km du centre",
+            shortDesc: "Grand parking près du téléphérique, calme, vue panoramique"
         },
         skiResort: {
             altitude: "1267-1723m",
@@ -122,18 +123,18 @@ const skiStations = [
         id: 6,
         name: "Villars-Gryon",
         region: "Vaud - Alpes Vaudoises",
-        lat: 46.3023,
-        lng: 7.0534,
+        lat: 46.28252,
+        lng: 7.07008,
         rvParking: {
             available: true,
-            capacity: 20,
+            capacity: 3,
             winterAccess: true,
             price: 15,
             amenities: ["electricity", "water", "waste", "toilets"],
-            address: "Barboleuse, 1882 Gryon",
+            address: "Place de la Barboleuse, 1882 Gryon",
             contact: "+41 24 498 00 00",
-            notes: "Tarif inclut 2 taxes de séjour adulte et carte Bienvenue, hiver: aire de Barboleuse uniquement",
-            shortDesc: "En hiver: aire de Barboleuse, tarif inclut carte Bienvenue avec avantages"
+            notes: "HIVER: seulement Barboleuse (2-3 places, travaux). 15 CHF pour 2 pers taxes incluses, élec 2 CHF, max 2 nuits",
+            shortDesc: "Hiver: Barboleuse uniquement, 15 CHF avec carte Bienvenue incluse"
         },
         skiResort: {
             altitude: "1200-2120m",
@@ -145,8 +146,8 @@ const skiStations = [
         id: 7,
         name: "Leysin",
         region: "Vaud - Alpes Vaudoises",
-        lat: 46.3451,
-        lng: 7.0123,
+        lat: 46.34088,
+        lng: 7.019631,
         rvParking: {
             available: true,
             capacity: 15,
@@ -156,7 +157,7 @@ const skiStations = [
             address: "Place des Feuilles, 1854 Leysin",
             contact: "+41 24 493 33 00",
             notes: "10 CHF/nuit + 3.80 CHF taxe séjour/personne, paiement au centre sportif, séjour max 5 nuits",
-            shortDesc: "Aire proche du centre sportif, séjour max 5 nuits"
+            shortDesc: "Aire proche du centre sportif, grand parking plat, max 5 nuits"
         },
         skiResort: {
             altitude: "1260-2205m",
@@ -197,11 +198,11 @@ const skiStations = [
             available: true,
             capacity: 25,
             winterAccess: true,
-            price: 24,
+            price: 31,
             amenities: ["electricity", "water", "waste", "toilets", "shower"],
             address: "Camping Le Berceau, Route des Mosses 16, 1660 Château-d'Oex",
             contact: "+41 26 924 62 34",
-            notes: "Camping ouvert toute l'année: 15 CHF emplacement + 9 CHF/adulte + 3 CHF taxe + 4 CHF électricité",
+            notes: "Camping ouvert toute l'année: 15 CHF emplacement + 9 CHF/adulte + 3 CHF taxe + 4 CHF électricité = 31 CHF total",
             shortDesc: "Camping 4 saisons, accès piscine gratuit, village des montgolfières"
         },
         skiResort: {
@@ -234,22 +235,22 @@ const skiStations = [
         }
     },
 
-    // ========== VALAIS (7 stations) ==========
+    // ========== VALAIS (8 stations) ==========
     {
         id: 11,
         name: "Anzère",
         region: "Valais - Sierre",
-        lat: 46.2978,
-        lng: 7.4123,
+        lat: 46.29727,
+        lng: 7.40688,
         rvParking: {
             available: true,
             capacity: 15,
             winterAccess: true,
             price: 6,
             amenities: ["electricity", "water", "waste"],
-            address: "Parking de l'Avenir, 1972 Anzère",
+            address: "Parking de l'Avenir, Route d'Anzère, 1972 Anzère",
             contact: "+41 27 399 28 00",
-            notes: "Taxe de séjour: 5.50 CHF/adulte, 2.75 CHF/enfant -16 ans, paiement par QR code Twint",
+            notes: "Parking + taxe de séjour: 5.50 CHF/adulte, 2.75 CHF/enfant -16 ans, paiement par QR code Twint",
             shortDesc: "Parking de l'Avenir en bas du village, paiement par QR code"
         },
         skiResort: {
@@ -285,8 +286,8 @@ const skiStations = [
         id: 13,
         name: "Grimentz",
         region: "Valais - Val d'Anniviers",
-        lat: 46.1756,
-        lng: 7.5678,
+        lat: 46.17381,
+        lng: 7.57235,
         rvParking: {
             available: true,
             capacity: 26,
@@ -295,8 +296,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste"],
             address: "Les Bouesses, Route de Moiry 27, 3961 Grimentz",
             contact: "+41 27 476 17 00",
-            notes: "Hiver: 30 CHF/jour taxe incluse, carte Anniviers Liberté offerte, 26 bornes électriques",
-            shortDesc: "Aire Les Bouesses, taxe de séjour incluse avec carte Anniviers Liberté"
+            notes: "Hiver: 30 CHF/jour taxe incluse, carte Anniviers Liberté offerte, 26 bornes électriques, 200m des remontées",
+            shortDesc: "Aire Les Bouesses, 200m des pistes, carte Anniviers Liberté incluse"
         },
         skiResort: {
             altitude: "1570-2900m",
@@ -331,18 +332,18 @@ const skiStations = [
         id: 15,
         name: "Saas-Fee",
         region: "Valais - Saastal",
-        lat: 46.1089,
-        lng: 7.9281,
+        lat: 46.109520,
+        lng: 7.930490,
         rvParking: {
             available: true,
             capacity: 45,
             winterAccess: true,
             price: 37,
             amenities: ["electricity", "water", "waste", "toilets", "wifi", "shower"],
-            address: "Parkhaus Alpin Express P4, 3906 Saas-Fee",
+            address: "Parkhaus P4, Kantonsstrasse 14, 3906 Saas-Fee",
             contact: "+41 27 958 18 58",
-            notes: "30 CHF parking + 7 CHF taxe/personne pour SaastalCard (obligatoire), village sans voiture",
-            shortDesc: "Parkhaus Alpin Express moderne, SaastalCard obligatoire, village piéton"
+            notes: "30 CHF parking + 7 CHF taxe/personne pour SaastalCard (obligatoire), village sans voiture, bus gratuit vers centre",
+            shortDesc: "Parkhaus P4 derrière parking principal, SaastalCard obligatoire, village piéton"
         },
         skiResort: {
             altitude: "1800-3600m",
@@ -352,6 +353,29 @@ const skiStations = [
     },
     {
         id: 16,
+        name: "Saas-Almagell",
+        region: "Valais - Saastal",
+        lat: 46.09084,
+        lng: 7.9568,
+        rvParking: {
+            available: true,
+            capacity: 60,
+            winterAccess: true,
+            price: 9,
+            amenities: ["electricity", "water", "waste"],
+            address: "Bilgersche, 3905 Saas-Almagell",
+            contact: "+41 27 957 18 88",
+            notes: "9 CHF pour 2 personnes taxes incluses, grand parking asphalté 60 places, ouvert toute l'année",
+            shortDesc: "Grand parking asphalté Bilgersche, 9 CHF/nuit taxes incluses"
+        },
+        skiResort: {
+            altitude: "1672-3200m",
+            pistes: "100km",
+            magicPass: true
+        }
+    },
+    {
+        id: 17,
         name: "Blatten-Belalp",
         region: "Valais - Naters",
         lat: 46.3723,
@@ -374,11 +398,11 @@ const skiStations = [
         }
     },
     {
-        id: 17,
+        id: 18,
         name: "Unterbäch",
         region: "Valais - Raron",
-        lat: 46.3012,
-        lng: 7.8156,
+        lat: 46.28858,
+        lng: 7.80143,
         rvParking: {
             available: true,
             capacity: 5,

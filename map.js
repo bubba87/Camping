@@ -1,39 +1,65 @@
 // Initialisation de la carte
 let map;
 let markers = [];
-let filteredStations = [...skiStations];
+let filteredStations = [];
+let greenIcon, yellowIcon;
 
-// Icônes personnalisées
-const greenIcon = L.icon({
-    iconUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSI0MSIgdmlld0JveD0iMCAwIDI1IDQxIj48cGF0aCBmaWxsPSIjMjhhNzQ1IiBkPSJNMTIuNSAwQzUuNiAwIDAgNS42IDAgMTIuNWMwIDkuNCAxMi41IDI4LjUgMTIuNSAyOC41UzI1IDIxLjkgMjUgMTIuNUMyNSA1LjYgMTkuNCA0IDEyLjUgMHptMCAxN2MtMi41IDAtNC41LTItNC41LTQuNXMyLTQuNSA0LjUtNC41IDQuNSAyIDQuNSA0LjUtMiA0LjUtNC41IDQuNXoiLz48L3N2Zz4=',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34]
-});
-
-const yellowIcon = L.icon({
-    iconUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSI0MSIgdmlld0JveD0iMCAwIDI1IDQxIj48cGF0aCBmaWxsPSIjZmZjMTA3IiBkPSJNMTIuNSAwQzUuNiAwIDAgNS42IDAgMTIuNWMwIDkuNCAxMi41IDI4LjUgMTIuNSAyOC41UzI1IDIxLjkgMjUgMTIuNUMyNSA1LjYgMTkuNCA0IDEyLjUgMHptMCAxN2MtMi41IDAtNC41LTItNC41LTQuNXMyLTQuNSA0LjUtNC41IDQuNSAyIDQuNSA0LjUtMiA0LjUtNC41IDQuNXoiLz48L3N2Zz4=',
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-    popupAnchor: [1, -34]
-});
+// Initialiser filteredStations après chargement
+if (typeof skiStations !== 'undefined') {
+    filteredStations = [...skiStations];
+} else {
+    console.error('skiStations n\'est pas défini');
+}
 
 // Initialiser la carte
 function initMap() {
-    // Centrer sur la Suisse
-    map = L.map('map').setView([46.5, 7.1], 9);
+    // Vérifier que Leaflet est chargé
+    if (typeof L === 'undefined') {
+        console.error('Leaflet n\'est pas chargé');
+        const mapElement = document.getElementById('map');
+        if (mapElement) {
+            mapElement.innerHTML = '<div style="padding: 20px; text-align: center; color: #999;">Erreur de chargement de la carte. Veuillez recharger la page.</div>';
+        }
+        return;
+    }
 
-    // Ajouter le fond de carte
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors',
-        maxZoom: 18
-    }).addTo(map);
+    try {
+        // Créer les icônes personnalisées
+        greenIcon = L.icon({
+            iconUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSI0MSIgdmlld0JveD0iMCAwIDI1IDQxIj48cGF0aCBmaWxsPSIjMjhhNzQ1IiBkPSJNMTIuNSAwQzUuNiAwIDAgNS42IDAgMTIuNWMwIDkuNCAxMi41IDI4LjUgMTIuNSAyOC41UzI1IDIxLjkgMjUgMTIuNUMyNSA1LjYgMTkuNCA0IDEyLjUgMHptMCAxN2MtMi41IDAtNC41LTItNC41LTQuNXMyLTQuNSA0LjUtNC41IDQuNSAyIDQuNSA0LjUtMiA0LjUtNC41IDQuNXoiLz48L3N2Zz4=',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34]
+        });
 
-    // Ajouter les marqueurs
-    addMarkers(filteredStations);
+        yellowIcon = L.icon({
+            iconUrl: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNSIgaGVpZ2h0PSI0MSIgdmlld0JveD0iMCAwIDI1IDQxIj48cGF0aCBmaWxsPSIjZmZjMTA3IiBkPSJNMTIuNSAwQzUuNiAwIDAgNS42IDAgMTIuNWMwIDkuNCAxMi41IDI4LjUgMTIuNSAyOC41UzI1IDIxLjkgMjUgMTIuNUMyNSA1LjYgMTkuNCA0IDEyLjUgMHptMCAxN2MtMi41IDAtNC41LTItNC41LTQuNXMyLTQuNSA0LjUtNC41IDQuNSAyIDQuNSA0LjUtMiA0LjUtNC41IDQuNXoiLz48L3N2Zz4=',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34]
+        });
 
-    // Afficher la liste des stations
-    updateStationList(filteredStations);
+        // Centrer sur la Suisse
+        map = L.map('map').setView([46.5, 7.1], 9);
+
+        // Ajouter le fond de carte
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 18
+        }).addTo(map);
+
+        // Ajouter les marqueurs
+        addMarkers(filteredStations);
+
+        // Afficher la liste des stations
+        updateStationList(filteredStations);
+    } catch (error) {
+        console.error('Erreur lors de l\'initialisation de la carte:', error);
+        const mapElement = document.getElementById('map');
+        if (mapElement) {
+            mapElement.innerHTML = '<div style="padding: 20px; text-align: center; color: #999;">Erreur lors de l\'initialisation de la carte.</div>';
+        }
+    }
 }
 
 // Créer le contenu du popup
@@ -244,35 +270,66 @@ function filterStations() {
 function switchTab(tab) {
     const sidebar = document.querySelector('.sidebar');
     const mapElement = document.getElementById('map');
-    const tabButtons = document.querySelectorAll('.tab-button');
+    const listTabButton = document.getElementById('listTabButton');
+    const mapTabButton = document.getElementById('mapTabButton');
+
+    if (!sidebar || !mapElement) {
+        console.error('Elements not found');
+        return;
+    }
 
     // Retirer la classe active de tous les boutons
-    tabButtons.forEach(btn => btn.classList.remove('active'));
+    if (listTabButton) listTabButton.classList.remove('active');
+    if (mapTabButton) mapTabButton.classList.remove('active');
 
     if (tab === 'list') {
         sidebar.classList.add('active');
         mapElement.classList.remove('active');
-        tabButtons[0].classList.add('active');
-    } else {
+        if (listTabButton) listTabButton.classList.add('active');
+    } else if (tab === 'map') {
         sidebar.classList.remove('active');
         mapElement.classList.add('active');
-        tabButtons[1].classList.add('active');
+        if (mapTabButton) mapTabButton.classList.add('active');
 
         // Forcer Leaflet à recalculer la taille de la carte
         setTimeout(() => {
             if (map) {
                 map.invalidateSize();
             }
-        }, 100);
+        }, 150);
+    }
+}
+
+// Fonction pour initialiser les événements des onglets
+function initTabEvents() {
+    const listTabButton = document.getElementById('listTabButton');
+    const mapTabButton = document.getElementById('mapTabButton');
+
+    if (listTabButton) {
+        listTabButton.addEventListener('click', () => switchTab('list'));
+    }
+
+    if (mapTabButton) {
+        mapTabButton.addEventListener('click', () => switchTab('map'));
     }
 }
 
 // Événements pour les filtres
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialiser la carte
     initMap();
 
-    document.getElementById('searchInput').addEventListener('input', filterStations);
-    document.getElementById('cantonFilter').addEventListener('change', filterStations);
-    document.getElementById('priceFilter').addEventListener('change', filterStations);
-    document.getElementById('amenityFilter').addEventListener('change', filterStations);
+    // Initialiser les événements des onglets
+    initTabEvents();
+
+    // Initialiser les événements des filtres
+    const searchInput = document.getElementById('searchInput');
+    const cantonFilter = document.getElementById('cantonFilter');
+    const priceFilter = document.getElementById('priceFilter');
+    const amenityFilter = document.getElementById('amenityFilter');
+
+    if (searchInput) searchInput.addEventListener('input', filterStations);
+    if (cantonFilter) cantonFilter.addEventListener('change', filterStations);
+    if (priceFilter) priceFilter.addEventListener('change', filterStations);
+    if (amenityFilter) amenityFilter.addEventListener('change', filterStations);
 });

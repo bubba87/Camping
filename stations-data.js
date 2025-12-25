@@ -14,7 +14,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets"],
             address: "Parking P1, La Berra, 1669 Les Sciernes-d'Albeuve",
             contact: "+41 26 928 14 80",
-            notes: "Parking directement aux pieds des pistes"
+            notes: "Parking directement aux pieds des pistes",
+            shortDesc: "Grand parking sécurisé au pied des pistes, accès facile toute l'année"
         },
         skiResort: {
             altitude: "1267-1723m",
@@ -36,7 +37,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi"],
             address: "Plan-Francey, 1663 Moléson-sur-Gruyères",
             contact: "+41 26 921 29 29",
-            notes: "Accès par funiculaire, parking au village"
+            notes: "Accès par funiculaire, parking au village",
+            shortDesc: "Parking au village, accès funiculaire, cadre pittoresque de Gruyère"
         },
         skiResort: {
             altitude: "1100-2002m",
@@ -58,7 +60,8 @@ const skiStations = [
             amenities: ["electricity", "toilets"],
             address: "Centre du village, 1619 Les Paccots",
             contact: "+41 21 947 17 17",
-            notes: "Parking au centre, navette gratuite vers les pistes"
+            notes: "Parking au centre, navette gratuite vers les pistes",
+            shortDesc: "Emplacement central avec navette pistes, environnement calme"
         },
         skiResort: {
             altitude: "1062-1700m",
@@ -80,7 +83,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "shower"],
             address: "Parking des Dents-Vertes, 1637 Charmey",
             contact: "+41 26 927 55 80",
-            notes: "Proche des thermes et du domaine skiable"
+            notes: "Proche des thermes et du domaine skiable",
+            shortDesc: "Parking aux Dents-Vertes, proche thermes, accès rapide aux pistes"
         },
         skiResort: {
             altitude: "900-1720m",
@@ -102,7 +106,8 @@ const skiStations = [
             amenities: ["electricity", "water", "toilets"],
             address: "Gypsera, 1716 Schwarzsee",
             contact: "+41 26 412 13 13",
-            notes: "Vue magnifique sur les Préalpes"
+            notes: "Vue magnifique sur les Préalpes",
+            shortDesc: "Parking Gypsera, vue Préalpes, secteur paisible et nature"
         },
         skiResort: {
             altitude: "1046-1750m",
@@ -124,7 +129,8 @@ const skiStations = [
             amenities: ["electricity", "toilets"],
             address: "Lally, 1808 Les Monts-de-Corsier",
             contact: "+41 21 921 05 38",
-            notes: "Petit domaine familial, parking simple"
+            notes: "Petit domaine familial, parking simple",
+            shortDesc: "Petit parking familial sur plateau, ambiance authentique"
         },
         skiResort: {
             altitude: "1360-1400m",
@@ -146,7 +152,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets"],
             address: "Dorfplatz, 1656 Jaun",
             contact: "+41 26 929 81 81",
-            notes: "Village authentique, ambiance calme"
+            notes: "Village authentique, ambiance calme",
+            shortDesc: "Place au village authentique, tranquillité garantie"
         },
         skiResort: {
             altitude: "1014-1509m",
@@ -168,7 +175,8 @@ const skiStations = [
             amenities: ["electricity", "toilets"],
             address: "Rathvel, 3280 Murten",
             contact: "+41 26 670 99 88",
-            notes: "Petit domaine, idéal pour familles"
+            notes: "Petit domaine, idéal pour familles",
+            shortDesc: "Emplacement simple et économique, idéal familles"
         },
         skiResort: {
             altitude: "1050-1200m",
@@ -190,7 +198,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi", "shower"],
             address: "Parking Roc d'Orsay, 1884 Villars-sur-Ollon",
             contact: "+41 24 495 32 32",
-            notes: "Grand domaine, toutes commodités"
+            notes: "Grand domaine, toutes commodités",
+            shortDesc: "Parking Roc d'Orsay équipé, grand domaine, toutes commodités"
         },
         skiResort: {
             altitude: "1200-2971m",
@@ -212,7 +221,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi"],
             address: "Place du Marché, 1854 Leysin",
             contact: "+41 24 493 33 00",
-            notes: "Station dynamique, parking central"
+            notes: "Station dynamique, parking central",
+            shortDesc: "Place du Marché centrale, station animée, services complets"
         },
         skiResort: {
             altitude: "1260-2200m",
@@ -234,7 +244,8 @@ const skiStations = [
             amenities: ["electricity", "water", "toilets"],
             address: "Col des Mosses, 1862 Les Mosses",
             contact: "+41 24 491 14 66",
-            notes: "Sur le col, accès facile"
+            notes: "Sur le col, accès facile",
+            shortDesc: "Parking sur le col, accès immédiat pistes, pratique"
         },
         skiResort: {
             altitude: "1445-1920m",
@@ -256,7 +267,8 @@ const skiStations = [
             amenities: ["electricity", "toilets"],
             address: "Village, 1862 La Lécherette",
             contact: "+41 24 491 32 32",
-            notes: "Station familiale et tranquille"
+            notes: "Station familiale et tranquille",
+            shortDesc: "Village station familiale, calme et convivial"
         },
         skiResort: {
             altitude: "1385-1678m",
@@ -278,7 +290,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi"],
             address: "La Frasse, 1660 Château-d'Oex",
             contact: "+41 26 924 25 25",
-            notes: "Capitale de la montgolfière, parking spacieux"
+            notes: "Capitale de la montgolfière, parking spacieux",
+            shortDesc: "La Frasse spacieux, capitale montgolfière, charme pays"
         },
         skiResort: {
             altitude: "958-2000m",
@@ -300,7 +313,8 @@ const skiStations = [
             amenities: ["electricity", "water", "toilets"],
             address: "Parking Videmanette, 1659 Rougemont",
             contact: "+41 26 925 11 66",
-            notes: "Charmant village, parking au calme"
+            notes: "Charmant village, parking au calme",
+            shortDesc: "Parking Videmanette au calme, village typique vaudois"
         },
         skiResort: {
             altitude: "1060-2156m",
@@ -322,7 +336,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "shower"],
             address: "Parking Principal, 1911 Ovronnaz",
             contact: "+41 27 306 42 93",
-            notes: "Combiné ski et thermes possible"
+            notes: "Combiné ski et thermes possible",
+            shortDesc: "Emplacement principal, combinaison ski-thermes idéale"
         },
         skiResort: {
             altitude: "1350-2466m",
@@ -344,7 +359,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi"],
             address: "Parking P1, Route de Guérite, 1972 Anzère",
             contact: "+41 27 399 28 00",
-            notes: "Station familiale ensoleillée, parking spacieux"
+            notes: "Station familiale ensoleillée, parking spacieux",
+            shortDesc: "Parking P1 spacieux, station ensoleillée, famille friendly"
         },
         skiResort: {
             altitude: "1500-2420m",
@@ -366,7 +382,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi", "shower"],
             address: "Parking de la Télécabine, 1997 Haute-Nendaz",
             contact: "+41 27 289 55 89",
-            notes: "Accès au domaine des 4 Vallées, parking équipé"
+            notes: "Accès au domaine des 4 Vallées, parking équipé",
+            shortDesc: "Télécabine parking équipé, porte 4 Vallées, domaine immense"
         },
         skiResort: {
             altitude: "1350-3330m",
@@ -388,7 +405,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi"],
             address: "Parking des Mayens, 1993 Veysonnaz",
             contact: "+41 27 207 10 53",
-            notes: "Village authentique, accès 4 Vallées"
+            notes: "Village authentique, accès 4 Vallées",
+            shortDesc: "Parking Mayens, village authentique, accès 4 Vallées rapide"
         },
         skiResort: {
             altitude: "1350-3330m",
@@ -410,7 +428,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi"],
             address: "Les Collons, 1988 Thyon",
             contact: "+41 27 281 27 27",
-            notes: "Au cœur des 4 Vallées, parking moderne"
+            notes: "Au cœur des 4 Vallées, parking moderne",
+            shortDesc: "Les Collons moderne, cœur 4 Vallées, commodités complètes"
         },
         skiResort: {
             altitude: "1350-3330m",
@@ -432,7 +451,8 @@ const skiStations = [
             amenities: ["electricity", "water", "toilets"],
             address: "Parking Principal, 1918 La Tzoumaz",
             contact: "+41 27 306 42 00",
-            notes: "Station calme, porte d'entrée des 4 Vallées"
+            notes: "Station calme, porte d'entrée des 4 Vallées",
+            shortDesc: "Station calme nature, entrée 4 Vallées, ambiance familiale"
         },
         skiResort: {
             altitude: "1500-3330m",
@@ -454,7 +474,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi", "shower"],
             address: "Parking du Téléphérique, 1874 Champéry",
             contact: "+41 24 479 20 20",
-            notes: "Village typique, accès Portes du Soleil"
+            notes: "Village typique, accès Portes du Soleil",
+            shortDesc: "Parking téléphérique, village typique, accès Portes du Soleil"
         },
         skiResort: {
             altitude: "1050-2466m",
@@ -476,7 +497,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi"],
             address: "Route de la Jorette, 1875 Morgins",
             contact: "+41 24 477 23 61",
-            notes: "Station familiale, domaine Portes du Soleil"
+            notes: "Station familiale, domaine Portes du Soleil",
+            shortDesc: "Route Jorette familial, domaine Portes du Soleil, convivial"
         },
         skiResort: {
             altitude: "1350-2466m",
@@ -498,7 +520,8 @@ const skiStations = [
             amenities: ["electricity", "water", "toilets", "wifi"],
             address: "Centre Station, 1899 Torgon",
             contact: "+41 24 481 21 21",
-            notes: "Station-village, vue sur le Léman"
+            notes: "Station-village, vue sur le Léman",
+            shortDesc: "Centre station village, vue Léman unique, Portes du Soleil"
         },
         skiResort: {
             altitude: "1100-2400m",
@@ -520,7 +543,8 @@ const skiStations = [
             amenities: ["electricity", "water", "toilets"],
             address: "Parking Central, 1873 Champoussin",
             contact: "+41 24 477 21 00",
-            notes: "Petit village, connexion Portes du Soleil"
+            notes: "Petit village, connexion Portes du Soleil",
+            shortDesc: "Parking central petit village, connexion Portes du Soleil"
         },
         skiResort: {
             altitude: "1580-2400m",
@@ -542,7 +566,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets"],
             address: "Route des Crosets, 1873 Les Crosets",
             contact: "+41 24 477 13 44",
-            notes: "En altitude, ski aux pieds possible"
+            notes: "En altitude, ski aux pieds possible",
+            shortDesc: "Route Crosets altitude, ski aux pieds, Portes du Soleil"
         },
         skiResort: {
             altitude: "1650-2466m",
@@ -564,7 +589,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi"],
             address: "Parking du Téléphérique, 3961 Grimentz",
             contact: "+41 27 476 17 00",
-            notes: "Village classé, architecture traditionnelle"
+            notes: "Village classé, architecture traditionnelle",
+            shortDesc: "Téléphérique village classé, architecture traditionnelle magnifique"
         },
         skiResort: {
             altitude: "1570-2900m",
@@ -586,7 +612,8 @@ const skiStations = [
             amenities: ["electricity", "water", "toilets", "wifi"],
             address: "Route de Tignousa, 3961 Saint-Luc",
             contact: "+41 27 476 16 00",
-            notes: "Observatoire astronomique, village ensoleillé"
+            notes: "Observatoire astronomique, village ensoleillé",
+            shortDesc: "Route Tignousa ensoleillé, observatoire, Val d'Anniviers"
         },
         skiResort: {
             altitude: "1650-3025m",
@@ -608,7 +635,8 @@ const skiStations = [
             amenities: ["electricity", "toilets"],
             address: "Village, 3967 Chandolin",
             contact: "+41 27 475 18 38",
-            notes: "Plus haut village avec église, charme authentique"
+            notes: "Plus haut village avec église, charme authentique",
+            shortDesc: "Village plus haut église, charme authentique altitude"
         },
         skiResort: {
             altitude: "1936-3000m",
@@ -630,7 +658,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets"],
             address: "Parking des Crêtes, 3967 Vercorin",
             contact: "+41 27 455 58 55",
-            notes: "Station sans voiture, parking en périphérie"
+            notes: "Station sans voiture, parking en périphérie",
+            shortDesc: "Parking Crêtes périphérie, station sans voiture, tranquillité"
         },
         skiResort: {
             altitude: "1340-2650m",
@@ -652,7 +681,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi"],
             address: "Parking Hannigalp, 3925 Grächen",
             contact: "+41 27 956 36 06",
-            notes: "Village de montagne sans voiture, parking équipé"
+            notes: "Village de montagne sans voiture, parking équipé",
+            shortDesc: "Hannigalp parking équipé, montagne sans voiture, services complets"
         },
         skiResort: {
             altitude: "1619-2868m",
@@ -674,7 +704,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi", "shower"],
             address: "Parkhaus Alpin Express, 3906 Saas-Fee",
             contact: "+41 27 958 18 58",
-            notes: "Perle des Alpes, village sans voiture, parking moderne"
+            notes: "Perle des Alpes, village sans voiture, parking moderne",
+            shortDesc: "Parkhaus Alpin Express moderne, Perle des Alpes, village piéton"
         },
         skiResort: {
             altitude: "1800-3600m",
@@ -696,7 +727,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets", "wifi"],
             address: "Parking Talstation, 3910 Saas-Grund",
             contact: "+41 27 958 18 58",
-            notes: "Vallée de Saas, ambiance authentique"
+            notes: "Vallée de Saas, ambiance authentique",
+            shortDesc: "Talstation vallée Saas, ambiance authentique, cadre préservé"
         },
         skiResort: {
             altitude: "1559-3200m",
@@ -718,7 +750,8 @@ const skiStations = [
             amenities: ["electricity", "water", "toilets"],
             address: "Parking Richinen, 3997 Bellwald",
             contact: "+41 27 971 16 84",
-            notes: "Haut-Valais, domaine familial tranquille"
+            notes: "Haut-Valais, domaine familial tranquille",
+            shortDesc: "Richinen Goms familial, Haut-Valais, domaine tranquille"
         },
         skiResort: {
             altitude: "1600-2560m",
@@ -740,7 +773,8 @@ const skiStations = [
             amenities: ["electricity", "water", "waste", "toilets"],
             address: "Blatten bei Naters, 3914 Blatten",
             contact: "+41 27 921 60 40",
-            notes: "Vue sur le glacier d'Aletsch"
+            notes: "Vue sur le glacier d'Aletsch",
+            shortDesc: "Blatten bei Naters, vue glacier Aletsch, nature exceptionnelle"
         },
         skiResort: {
             altitude: "1322-3118m",
@@ -762,7 +796,8 @@ const skiStations = [
             amenities: ["electricity", "water", "toilets"],
             address: "Dorfzentrum, 3944 Unterbäch",
             contact: "+41 27 934 56 85",
-            notes: "Village ensoleillé, cadre familial"
+            notes: "Village ensoleillé, cadre familial",
+            shortDesc: "Dorfzentrum ensoleillé, village familial, calme assuré"
         },
         skiResort: {
             altitude: "1230-2350m",
@@ -784,7 +819,8 @@ const skiStations = [
             amenities: ["electricity", "water", "toilets"],
             address: "Route de Bruson, 1934 Bruson",
             contact: "+41 27 776 16 77",
-            notes: "Secteur authentique des 4 Vallées"
+            notes: "Secteur authentique des 4 Vallées",
+            shortDesc: "Route Bruson authentique, secteur 4 Vallées, hors foule"
         },
         skiResort: {
             altitude: "1080-2700m",
@@ -806,7 +842,8 @@ const skiStations = [
             amenities: ["electricity", "toilets"],
             address: "Parking Télécabine, 1983 Evolène",
             contact: "+41 27 283 40 00",
-            notes: "Village traditionnel, Val d'Hérens"
+            notes: "Village traditionnel, Val d'Hérens",
+            shortDesc: "Télécabine Val d'Hérens, village traditionnel, patrimoine vivant"
         },
         skiResort: {
             altitude: "1370-2450m",

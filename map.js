@@ -3,6 +3,7 @@ let map;
 let markers = [];
 let filteredStations = [];
 let greenIcon, yellowIcon;
+let favorites = JSON.parse(localStorage.getItem('skiStationFavorites')) || [];
 
 // Initialiser filteredStations après chargement et trier par ordre alphabétique
 if (typeof skiStations !== 'undefined') {
@@ -11,6 +12,23 @@ if (typeof skiStations !== 'undefined') {
     );
 } else {
     console.error('skiStations n\'est pas défini');
+}
+
+// Gestion des favoris
+function toggleFavorite(stationId) {
+    const index = favorites.indexOf(stationId);
+    if (index > -1) {
+        favorites.splice(index, 1);
+    } else {
+        favorites.push(stationId);
+    }
+    localStorage.setItem('skiStationFavorites', JSON.stringify(favorites));
+    updateStationList(filteredStations);
+    return favorites.includes(stationId);
+}
+
+function isFavorite(stationId) {
+    return favorites.includes(stationId);
 }
 
 // Initialiser la carte
@@ -84,33 +102,19 @@ function createPopupContent(station) {
 
     return `
         <div class="popup-title">${station.name}</div>
-
-        <div class="popup-section">
-            <strong>📍 Région:</strong> ${station.region}
-        </div>
-
-        <div class="popup-section">
-            <strong>⛷️ Domaine skiable:</strong>
-            <div>Altitude: ${station.skiResort.altitude}</div>
-            <div>Pistes: ${station.skiResort.pistes}</div>
-            <div style="color: #667eea; font-weight: 600;">✓ MagicPass inclus</div>
-        </div>
+        <div style="font-size: 13px; color: #666; margin-bottom: 8px;">📍 ${station.region} | ⛷️ ${station.skiResort.altitude}</div>
 
         <div class="popup-price">
             ${station.rvParking.price} CHF / nuit
         </div>
 
         <div class="popup-section">
-            <strong>🚐 Emplacement Camping-Car:</strong>
-            <div style="background: #f8f9fa; padding: 8px; border-radius: 4px; margin-top: 5px;">
-                <div style="font-weight: 600; color: #667eea; margin-bottom: 4px;">${parkingName}</div>
-                <div style="font-size: 13px;">${station.rvParking.address}</div>
-                <div style="font-size: 12px; color: #666; margin-top: 4px;">
-                    📌 GPS: ${station.lat.toFixed(4)}°N, ${station.lng.toFixed(4)}°E
-                </div>
+            <strong>🚐 ${parkingName}</strong>
+            ${station.rvParking.shortDesc ? `<div style="font-size: 12px; color: #555; font-style: italic; margin: 3px 0;">💬 ${station.rvParking.shortDesc}</div>` : ''}
+            <div style="background: #f8f9fa; padding: 6px; border-radius: 4px; margin-top: 4px; font-size: 12px;">
+                <div style="margin: 2px 0;">🅿️ ${station.rvParking.capacity} places | ${station.rvParking.winterAccess ? '✓ Ouvert hiver' : '✗ Fermé hiver'}</div>
+                <div style="margin: 2px 0;">📌 ${station.lat.toFixed(4)}°N, ${station.lng.toFixed(4)}°E</div>
             </div>
-            <div style="margin-top: 5px;">Capacité: ${station.rvParking.capacity} places</div>
-            <div>Accès hivernal: ${station.rvParking.winterAccess ? '✓ Ouvert' : '✗ Fermé'}</div>
         </div>
 
         <div class="popup-section">
@@ -120,13 +124,10 @@ function createPopupContent(station) {
             </div>
         </div>
 
-        <div class="popup-section">
-            <strong>📞 Contact:</strong>
-            <div>${station.rvParking.contact}</div>
-        </div>
-
-        <div class="popup-section" style="font-style: italic; font-size: 13px; color: #666;">
-            ℹ️ ${station.rvParking.notes}
+        <div class="popup-section" style="font-size: 12px;">
+            <div style="margin: 3px 0;">⛷️ Pistes: ${station.skiResort.pistes} | <span style="color: #667eea; font-weight: 600;">MagicPass ✓</span></div>
+            <div style="margin: 3px 0;">📞 ${station.rvParking.contact}</div>
+            ${station.rvParking.notes ? `<div style="font-style: italic; color: #666; margin-top: 4px;">ℹ️ ${station.rvParking.notes}</div>` : ''}
         </div>
     `;
 }
@@ -190,20 +191,31 @@ function updateStationList(stations) {
             .join(' ');
 
         const parkingName = station.rvParking.address.split(',')[0];
+        const isFav = isFavorite(station.id);
 
         return `
-            <div class="station-item" onclick="focusStation(${station.id})">
-                <h3>${station.name}</h3>
-                <div style="font-size: 13px; color: #666;">📍 ${station.region}</div>
-                <div class="price">${station.rvParking.price} CHF/nuit</div>
-                <div style="font-size: 12px; color: #555; margin: 5px 0; font-weight: 500;">
-                    🅿️ ${parkingName}
-                </div>
-                <div class="amenities">
-                    🚐 ${station.rvParking.capacity} places | ${amenitiesText}
-                </div>
-                <div style="font-size: 11px; color: #888; margin-top: 5px;">
-                    📌 ${station.lat.toFixed(4)}°N, ${station.lng.toFixed(4)}°E
+            <div class="station-item">
+                <div style="position: relative;">
+                    <button class="favorite-btn ${isFav ? 'active' : ''}"
+                            onclick="event.stopPropagation(); toggleFavorite(${station.id});"
+                            title="${isFav ? 'Retirer des favoris' : 'Ajouter aux favoris'}">
+                        ${isFav ? '❤️' : '🤍'}
+                    </button>
+                    <div onclick="focusStation(${station.id})" style="cursor: pointer;">
+                        <h3>${station.name}</h3>
+                        <div style="font-size: 13px; color: #666;">📍 ${station.region}</div>
+                        ${station.rvParking.shortDesc ? `<div style="font-size: 12px; color: #777; font-style: italic; margin: 4px 0;">💬 ${station.rvParking.shortDesc}</div>` : ''}
+                        <div class="price">${station.rvParking.price} CHF/nuit</div>
+                        <div style="font-size: 12px; color: #555; margin: 5px 0; font-weight: 500;">
+                            🅿️ ${parkingName}
+                        </div>
+                        <div class="amenities">
+                            🚐 ${station.rvParking.capacity} places | ${amenitiesText}
+                        </div>
+                        <div style="font-size: 11px; color: #888; margin-top: 5px;">
+                            📌 ${station.lat.toFixed(4)}°N, ${station.lng.toFixed(4)}°E
+                        </div>
+                    </div>
                 </div>
             </div>
         `;
@@ -241,6 +253,8 @@ function filterStations() {
     const canton = cantonFilter ? cantonFilter.value : 'all';
     const maxPrice = document.getElementById('priceFilter').value;
     const amenity = document.getElementById('amenityFilter').value;
+    const favoritesFilter = document.getElementById('favoritesFilter');
+    const showOnlyFavorites = favoritesFilter ? favoritesFilter.value === 'favorites' : false;
 
     filteredStations = skiStations.filter(station => {
         // Filtre de recherche
@@ -257,7 +271,10 @@ function filterStations() {
         // Filtre de commodités
         const matchesAmenity = amenity === 'all' || station.rvParking.amenities.includes(amenity);
 
-        return matchesSearch && matchesCanton && matchesPrice && matchesAmenity;
+        // Filtre de favoris
+        const matchesFavorites = !showOnlyFavorites || isFavorite(station.id);
+
+        return matchesSearch && matchesCanton && matchesPrice && matchesAmenity && matchesFavorites;
     });
 
     // Trier les stations filtrées par ordre alphabétique
@@ -339,9 +356,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const cantonFilter = document.getElementById('cantonFilter');
     const priceFilter = document.getElementById('priceFilter');
     const amenityFilter = document.getElementById('amenityFilter');
+    const favoritesFilter = document.getElementById('favoritesFilter');
 
     if (searchInput) searchInput.addEventListener('input', filterStations);
     if (cantonFilter) cantonFilter.addEventListener('change', filterStations);
     if (priceFilter) priceFilter.addEventListener('change', filterStations);
     if (amenityFilter) amenityFilter.addEventListener('change', filterStations);
+    if (favoritesFilter) favoritesFilter.addEventListener('change', filterStations);
 });

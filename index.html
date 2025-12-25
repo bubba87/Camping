@@ -215,6 +215,36 @@
             max-width: 280px;
         }
 
+        /* Styling des boutons favoris */
+        .favorite-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .favorite-btn:hover {
+            transform: scale(1.1);
+            border-color: #667eea;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+        }
+
+        .favorite-btn.active {
+            border-color: #ff6b6b;
+            background: #fff5f5;
+        }
+
         .legend {
             background: white;
             padding: 15px;
@@ -330,18 +360,47 @@
             }
 
             .leaflet-popup-content {
-                margin: 10px !important;
-                max-width: 250px;
-                font-size: 13px;
+                margin: 8px !important;
+                max-width: 260px;
+                font-size: 12px;
             }
 
             .popup-title {
-                font-size: 16px;
+                font-size: 15px;
+                margin-bottom: 6px !important;
             }
 
             .popup-price {
-                padding: 6px 10px;
-                font-size: 13px;
+                padding: 5px 10px;
+                font-size: 12px;
+                margin: 6px 0 !important;
+            }
+
+            .popup-section {
+                margin: 6px 0 !important;
+            }
+
+            .popup-section strong {
+                font-size: 12px;
+                margin-bottom: 3px !important;
+            }
+
+            .popup-section div {
+                line-height: 1.4;
+            }
+
+            .popup-amenities {
+                gap: 3px !important;
+            }
+
+            .amenity-tag {
+                padding: 3px 6px;
+                font-size: 11px;
+            }
+
+            /* Mise en page plus compacte pour les infos parking sur mobile */
+            .popup-section > div[style*="background"] {
+                padding: 6px !important;
             }
 
             /* Améliorer le touch sur les boutons d'onglets */
@@ -406,6 +465,14 @@
                         <option value="Fribourg">Fribourg</option>
                         <option value="Vaud">Vaud</option>
                         <option value="Valais">Valais</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Favoris</label>
+                    <select id="favoritesFilter">
+                        <option value="all">Toutes les stations</option>
+                        <option value="favorites">Favoris uniquement</option>
                     </select>
                 </div>
 

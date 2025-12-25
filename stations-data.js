@@ -1,11 +1,12 @@
-// Données des stations de ski MagicPass avec emplacements camping-car
+// Données des stations de ski MagicPass 2025-2026 avec emplacements camping-car HIVER
 const skiStations = [
+    // ========== FRIBOURG (5 stations) ==========
     {
         id: 1,
         name: "La Berra",
         region: "Fribourg",
-        lat: 46.6917,
-        lng: 7.0889,
+        lat: 46.6756,
+        lng: 7.0917,
         rvParking: {
             available: true,
             capacity: 25,
@@ -19,16 +20,16 @@ const skiStations = [
         },
         skiResort: {
             altitude: "1267-1723m",
-            pistes: "13",
+            pistes: "13km",
             magicPass: true
         }
     },
     {
         id: 2,
         name: "Moléson",
-        region: "Gruyère",
-        lat: 46.5447,
-        lng: 7.0186,
+        region: "Fribourg - Gruyère",
+        lat: 46.5445,
+        lng: 7.0189,
         rvParking: {
             available: true,
             capacity: 15,
@@ -42,53 +43,53 @@ const skiStations = [
         },
         skiResort: {
             altitude: "1100-2002m",
-            pistes: "11",
+            pistes: "11km",
             magicPass: true
         }
     },
     {
         id: 3,
         name: "Les Paccots",
-        region: "Vaud",
-        lat: 46.5278,
-        lng: 6.9542,
+        region: "Fribourg - Veveyse",
+        lat: 46.5234,
+        lng: 6.9445,
         rvParking: {
             available: true,
             capacity: 20,
             winterAccess: true,
-            price: 20,
-            amenities: ["electricity", "toilets"],
-            address: "Centre du village, 1619 Les Paccots",
-            contact: "+41 21 947 17 17",
-            notes: "Parking au centre, navette gratuite vers les pistes",
-            shortDesc: "Emplacement central avec navette pistes, environnement calme"
+            price: 25,
+            amenities: ["electricity", "water", "waste", "toilets", "shower"],
+            address: "Camping Le Bivouac, 1619 Les Paccots",
+            contact: "+41 21 948 73 21",
+            notes: "Camping ouvert toute l'année, au bord du lac",
+            shortDesc: "Camping 4 saisons au bord du lac, cadre paisible et nature"
         },
         skiResort: {
-            altitude: "1062-1700m",
-            pistes: "8",
+            altitude: "1062-1470m",
+            pistes: "8km",
             magicPass: true
         }
     },
     {
         id: 4,
         name: "Charmey",
-        region: "Fribourg",
-        lat: 46.6186,
-        lng: 7.1611,
+        region: "Fribourg - Gruyère",
+        lat: 46.6189,
+        lng: 7.1623,
         rvParking: {
             available: true,
             capacity: 12,
             winterAccess: true,
-            price: 22,
-            amenities: ["electricity", "water", "waste", "toilets", "shower"],
-            address: "Parking des Dents-Vertes, 1637 Charmey",
-            contact: "+41 26 927 55 80",
-            notes: "Proche des thermes et du domaine skiable",
-            shortDesc: "Parking aux Dents-Vertes, proche thermes, accès rapide aux pistes"
+            price: 20,
+            amenities: ["electricity", "water", "waste", "toilets"],
+            address: "Parking Télécabine, 1637 Charmey",
+            contact: "+41 26 927 15 15",
+            notes: "Parking près de la télécabine, accès bains thermaux",
+            shortDesc: "Parking télécabine, proche des bains thermaux de Charmey"
         },
         skiResort: {
-            altitude: "900-1720m",
-            pistes: "12",
+            altitude: "900-1730m",
+            pistes: "28km",
             magicPass: true
         }
     },
@@ -96,271 +97,160 @@ const skiStations = [
         id: 5,
         name: "Schwarzsee",
         region: "Fribourg",
-        lat: 46.6561,
-        lng: 7.2858,
+        lat: 46.6678,
+        lng: 7.2892,
         rvParking: {
             available: true,
             capacity: 18,
             winterAccess: true,
-            price: 28,
-            amenities: ["electricity", "water", "toilets"],
-            address: "Gypsera, 1716 Schwarzsee",
-            contact: "+41 26 412 13 13",
-            notes: "Vue magnifique sur les Préalpes",
-            shortDesc: "Parking Gypsera, vue Préalpes, secteur paisible et nature"
+            price: 43,
+            amenities: ["electricity", "water", "waste", "toilets", "shower"],
+            address: "Camping Seeweid, 1716 Schwarzsee",
+            contact: "+41 26 412 16 79",
+            notes: "Camping ouvert toute l'année, au bord du lac",
+            shortDesc: "Camping au bord du Lac Noir, ouvert toute l'année"
         },
         skiResort: {
             altitude: "1046-1750m",
-            pistes: "10",
+            pistes: "10km",
             magicPass: true
         }
     },
+
+    // ========== VAUD (5 stations) ==========
     {
         id: 6,
-        name: "Les Pléiades",
-        region: "Vaud",
-        lat: 46.4686,
-        lng: 6.9203,
+        name: "Villars-Gryon",
+        region: "Vaud - Alpes Vaudoises",
+        lat: 46.3023,
+        lng: 7.0534,
         rvParking: {
             available: true,
-            capacity: 10,
+            capacity: 20,
             winterAccess: true,
-            price: 18,
-            amenities: ["electricity", "toilets"],
-            address: "Lally, 1808 Les Monts-de-Corsier",
-            contact: "+41 21 921 05 38",
-            notes: "Petit domaine familial, parking simple",
-            shortDesc: "Petit parking familial sur plateau, ambiance authentique"
+            price: 15,
+            amenities: ["electricity", "water", "waste", "toilets"],
+            address: "Barboleuse, 1882 Gryon",
+            contact: "+41 24 498 00 00",
+            notes: "Tarif inclut 2 taxes de séjour adulte et carte Bienvenue, hiver: aire de Barboleuse uniquement",
+            shortDesc: "En hiver: aire de Barboleuse, tarif inclut carte Bienvenue avec avantages"
         },
         skiResort: {
-            altitude: "1360-1400m",
-            pistes: "6",
+            altitude: "1200-2120m",
+            pistes: "115km",
             magicPass: true
         }
     },
     {
         id: 7,
-        name: "Jaun-Dorf",
-        region: "Fribourg",
-        lat: 46.6111,
-        lng: 7.2750,
+        name: "Leysin",
+        region: "Vaud - Alpes Vaudoises",
+        lat: 46.3451,
+        lng: 7.0123,
         rvParking: {
             available: true,
             capacity: 15,
             winterAccess: true,
-            price: 24,
+            price: 14,
             amenities: ["electricity", "water", "waste", "toilets"],
-            address: "Dorfplatz, 1656 Jaun",
-            contact: "+41 26 929 81 81",
-            notes: "Village authentique, ambiance calme",
-            shortDesc: "Place au village authentique, tranquillité garantie"
-        },
-        skiResort: {
-            altitude: "1014-1509m",
-            pistes: "7",
-            magicPass: true
-        }
-    },
-    {
-        id: 8,
-        name: "Rathvel",
-        region: "Fribourg",
-        lat: 46.7333,
-        lng: 7.0667,
-        rvParking: {
-            available: true,
-            capacity: 8,
-            winterAccess: true,
-            price: 15,
-            amenities: ["electricity", "toilets"],
-            address: "Rathvel, 3280 Murten",
-            contact: "+41 26 670 99 88",
-            notes: "Petit domaine, idéal pour familles",
-            shortDesc: "Emplacement simple et économique, idéal familles"
-        },
-        skiResort: {
-            altitude: "1050-1200m",
-            pistes: "4",
-            magicPass: true
-        }
-    },
-    {
-        id: 9,
-        name: "Villars-Gryon",
-        region: "Vaud",
-        lat: 46.2978,
-        lng: 7.0556,
-        rvParking: {
-            available: true,
-            capacity: 30,
-            winterAccess: true,
-            price: 35,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi", "shower"],
-            address: "Parking Roc d'Orsay, 1884 Villars-sur-Ollon",
-            contact: "+41 24 495 32 32",
-            notes: "Grand domaine, toutes commodités",
-            shortDesc: "Parking Roc d'Orsay équipé, grand domaine, toutes commodités"
-        },
-        skiResort: {
-            altitude: "1200-2971m",
-            pistes: "44",
-            magicPass: true
-        }
-    },
-    {
-        id: 10,
-        name: "Leysin",
-        region: "Vaud",
-        lat: 46.3444,
-        lng: 7.0103,
-        rvParking: {
-            available: true,
-            capacity: 22,
-            winterAccess: true,
-            price: 32,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi"],
-            address: "Place du Marché, 1854 Leysin",
+            address: "Place des Feuilles, 1854 Leysin",
             contact: "+41 24 493 33 00",
-            notes: "Station dynamique, parking central",
-            shortDesc: "Place du Marché centrale, station animée, services complets"
+            notes: "10 CHF/nuit + 3.80 CHF taxe séjour/personne, paiement au centre sportif, séjour max 5 nuits",
+            shortDesc: "Aire proche du centre sportif, séjour max 5 nuits"
         },
         skiResort: {
-            altitude: "1260-2200m",
+            altitude: "1260-2205m",
             pistes: "60km",
             magicPass: true
         }
     },
     {
-        id: 11,
-        name: "Les Mosses",
-        region: "Vaud",
-        lat: 46.3958,
-        lng: 7.1000,
-        rvParking: {
-            available: true,
-            capacity: 20,
-            winterAccess: true,
-            price: 26,
-            amenities: ["electricity", "water", "toilets"],
-            address: "Col des Mosses, 1862 Les Mosses",
-            contact: "+41 24 491 14 66",
-            notes: "Sur le col, accès facile",
-            shortDesc: "Parking sur le col, accès immédiat pistes, pratique"
-        },
-        skiResort: {
-            altitude: "1445-1920m",
-            pistes: "15",
-            magicPass: true
-        }
-    },
-    {
-        id: 12,
-        name: "La Lécherette",
-        region: "Vaud",
-        lat: 46.4333,
-        lng: 7.1167,
-        rvParking: {
-            available: true,
-            capacity: 12,
-            winterAccess: true,
-            price: 22,
-            amenities: ["electricity", "toilets"],
-            address: "Village, 1862 La Lécherette",
-            contact: "+41 24 491 32 32",
-            notes: "Station familiale et tranquille",
-            shortDesc: "Village station familiale, calme et convivial"
-        },
-        skiResort: {
-            altitude: "1385-1678m",
-            pistes: "8",
-            magicPass: true
-        }
-    },
-    {
-        id: 13,
-        name: "Château-d'Oex",
-        region: "Vaud",
-        lat: 46.4758,
-        lng: 7.1333,
-        rvParking: {
-            available: true,
-            capacity: 16,
-            winterAccess: true,
-            price: 28,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi"],
-            address: "La Frasse, 1660 Château-d'Oex",
-            contact: "+41 26 924 25 25",
-            notes: "Capitale de la montgolfière, parking spacieux",
-            shortDesc: "La Frasse spacieux, capitale montgolfière, charme pays"
-        },
-        skiResort: {
-            altitude: "958-2000m",
-            pistes: "12",
-            magicPass: true
-        }
-    },
-    {
-        id: 14,
-        name: "Rougemont",
-        region: "Vaud",
-        lat: 46.4917,
-        lng: 7.2083,
+        id: 8,
+        name: "Les Mosses-La Lécherette",
+        region: "Vaud - Alpes Vaudoises",
+        lat: 46.3967,
+        lng: 7.1034,
         rvParking: {
             available: true,
             capacity: 10,
             winterAccess: true,
-            price: 25,
+            price: 15,
             amenities: ["electricity", "water", "toilets"],
-            address: "Parking Videmanette, 1659 Rougemont",
-            contact: "+41 26 925 11 66",
-            notes: "Charmant village, parking au calme",
-            shortDesc: "Parking Videmanette au calme, village typique vaudois"
+            address: "Col des Mosses, 1862 Les Mosses",
+            contact: "+41 24 491 14 66",
+            notes: "Parking au col, accès direct aux pistes",
+            shortDesc: "Parking au col, accès direct pistes et ski de fond"
         },
         skiResort: {
-            altitude: "1060-2156m",
-            pistes: "10",
+            altitude: "1445-2002m",
+            pistes: "50km",
             magicPass: true
         }
     },
     {
-        id: 15,
-        name: "Ovronnaz",
-        region: "Valais",
-        lat: 46.2333,
-        lng: 7.1833,
-        rvParking: {
-            available: true,
-            capacity: 18,
-            winterAccess: true,
-            price: 30,
-            amenities: ["electricity", "water", "waste", "toilets", "shower"],
-            address: "Parking Principal, 1911 Ovronnaz",
-            contact: "+41 27 306 42 93",
-            notes: "Combiné ski et thermes possible",
-            shortDesc: "Emplacement principal, combinaison ski-thermes idéale"
-        },
-        skiResort: {
-            altitude: "1350-2466m",
-            pistes: "25km",
-            magicPass: true
-        }
-    },
-    {
-        id: 16,
-        name: "Anzère",
-        region: "Valais",
-        lat: 46.2989,
-        lng: 7.4006,
+        id: 9,
+        name: "Château-d'Oex",
+        region: "Vaud - Pays-d'Enhaut",
+        lat: 46.4756,
+        lng: 7.1334,
         rvParking: {
             available: true,
             capacity: 25,
             winterAccess: true,
-            price: 32,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi"],
-            address: "Parking P1, Route de Guérite, 1972 Anzère",
+            price: 24,
+            amenities: ["electricity", "water", "waste", "toilets", "shower"],
+            address: "Camping Le Berceau, Route des Mosses 16, 1660 Château-d'Oex",
+            contact: "+41 26 924 62 34",
+            notes: "Camping ouvert toute l'année: 15 CHF emplacement + 9 CHF/adulte + 3 CHF taxe + 4 CHF électricité",
+            shortDesc: "Camping 4 saisons, accès piscine gratuit, village des montgolfières"
+        },
+        skiResort: {
+            altitude: "1000-1628m",
+            pistes: "38km",
+            magicPass: true
+        }
+    },
+    {
+        id: 10,
+        name: "Les Pléiades",
+        region: "Vaud - Riviera-Pays-d'Enhaut",
+        lat: 46.4845,
+        lng: 6.9223,
+        rvParking: {
+            available: true,
+            capacity: 8,
+            winterAccess: true,
+            price: 10,
+            amenities: ["electricity", "toilets"],
+            address: "Parking Les Pléiades, 1808 Les Monts-de-Corsier",
+            contact: "+41 21 989 33 30",
+            notes: "Petit parking de montagne, vue panoramique sur le Léman",
+            shortDesc: "Petit parking panoramique, vue exceptionnelle sur le Léman et les Alpes"
+        },
+        skiResort: {
+            altitude: "1360-1400m",
+            pistes: "6km",
+            magicPass: true
+        }
+    },
+
+    // ========== VALAIS (7 stations) ==========
+    {
+        id: 11,
+        name: "Anzère",
+        region: "Valais - Sierre",
+        lat: 46.2978,
+        lng: 7.4123,
+        rvParking: {
+            available: true,
+            capacity: 15,
+            winterAccess: true,
+            price: 6,
+            amenities: ["electricity", "water", "waste"],
+            address: "Parking de l'Avenir, 1972 Anzère",
             contact: "+41 27 399 28 00",
-            notes: "Station familiale ensoleillée, parking spacieux",
-            shortDesc: "Parking P1 spacieux, station ensoleillée, famille friendly"
+            notes: "Taxe de séjour: 5.50 CHF/adulte, 2.75 CHF/enfant -16 ans, paiement par QR code Twint",
+            shortDesc: "Parking de l'Avenir en bas du village, paiement par QR code"
         },
         skiResort: {
             altitude: "1500-2420m",
@@ -369,228 +259,44 @@ const skiStations = [
         }
     },
     {
-        id: 17,
-        name: "Nendaz",
-        region: "Valais - 4 Vallées",
-        lat: 46.1919,
-        lng: 7.2894,
-        rvParking: {
-            available: true,
-            capacity: 35,
-            winterAccess: true,
-            price: 38,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi", "shower"],
-            address: "Parking de la Télécabine, 1997 Haute-Nendaz",
-            contact: "+41 27 289 55 89",
-            notes: "Accès au domaine des 4 Vallées, parking équipé",
-            shortDesc: "Télécabine parking équipé, porte 4 Vallées, domaine immense"
-        },
-        skiResort: {
-            altitude: "1350-3330m",
-            pistes: "410km (4 Vallées)",
-            magicPass: true
-        }
-    },
-    {
-        id: 18,
-        name: "Veysonnaz",
-        region: "Valais - 4 Vallées",
-        lat: 46.1994,
-        lng: 7.3378,
-        rvParking: {
-            available: true,
-            capacity: 28,
-            winterAccess: true,
-            price: 35,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi"],
-            address: "Parking des Mayens, 1993 Veysonnaz",
-            contact: "+41 27 207 10 53",
-            notes: "Village authentique, accès 4 Vallées",
-            shortDesc: "Parking Mayens, village authentique, accès 4 Vallées rapide"
-        },
-        skiResort: {
-            altitude: "1350-3330m",
-            pistes: "410km (4 Vallées)",
-            magicPass: true
-        }
-    },
-    {
-        id: 19,
-        name: "Thyon",
-        region: "Valais - 4 Vallées",
-        lat: 46.1753,
-        lng: 7.3747,
-        rvParking: {
-            available: true,
-            capacity: 30,
-            winterAccess: true,
-            price: 36,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi"],
-            address: "Les Collons, 1988 Thyon",
-            contact: "+41 27 281 27 27",
-            notes: "Au cœur des 4 Vallées, parking moderne",
-            shortDesc: "Les Collons moderne, cœur 4 Vallées, commodités complètes"
-        },
-        skiResort: {
-            altitude: "1350-3330m",
-            pistes: "410km (4 Vallées)",
-            magicPass: true
-        }
-    },
-    {
-        id: 20,
-        name: "La Tzoumaz",
-        region: "Valais - 4 Vallées",
-        lat: 46.1361,
-        lng: 7.2194,
+        id: 12,
+        name: "Ovronnaz",
+        region: "Valais - Leytron",
+        lat: 46.2023,
+        lng: 7.1889,
         rvParking: {
             available: true,
             capacity: 20,
             winterAccess: true,
-            price: 30,
-            amenities: ["electricity", "water", "toilets"],
-            address: "Parking Principal, 1918 La Tzoumaz",
-            contact: "+41 27 306 42 00",
-            notes: "Station calme, porte d'entrée des 4 Vallées",
-            shortDesc: "Station calme nature, entrée 4 Vallées, ambiance familiale"
-        },
-        skiResort: {
-            altitude: "1500-3330m",
-            pistes: "410km (4 Vallées)",
-            magicPass: true
-        }
-    },
-    {
-        id: 21,
-        name: "Champéry",
-        region: "Valais - Portes du Soleil",
-        lat: 46.1756,
-        lng: 6.8706,
-        rvParking: {
-            available: true,
-            capacity: 40,
-            winterAccess: true,
-            price: 40,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi", "shower"],
-            address: "Parking du Téléphérique, 1874 Champéry",
-            contact: "+41 24 479 20 20",
-            notes: "Village typique, accès Portes du Soleil",
-            shortDesc: "Parking téléphérique, village typique, accès Portes du Soleil"
-        },
-        skiResort: {
-            altitude: "1050-2466m",
-            pistes: "650km (Portes du Soleil)",
-            magicPass: true
-        }
-    },
-    {
-        id: 22,
-        name: "Morgins",
-        region: "Valais - Portes du Soleil",
-        lat: 46.2361,
-        lng: 6.8550,
-        rvParking: {
-            available: true,
-            capacity: 32,
-            winterAccess: true,
-            price: 36,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi"],
-            address: "Route de la Jorette, 1875 Morgins",
-            contact: "+41 24 477 23 61",
-            notes: "Station familiale, domaine Portes du Soleil",
-            shortDesc: "Route Jorette familial, domaine Portes du Soleil, convivial"
-        },
-        skiResort: {
-            altitude: "1350-2466m",
-            pistes: "650km (Portes du Soleil)",
-            magicPass: true
-        }
-    },
-    {
-        id: 23,
-        name: "Torgon",
-        region: "Valais - Portes du Soleil",
-        lat: 46.2822,
-        lng: 6.8361,
-        rvParking: {
-            available: true,
-            capacity: 24,
-            winterAccess: true,
-            price: 32,
-            amenities: ["electricity", "water", "toilets", "wifi"],
-            address: "Centre Station, 1899 Torgon",
-            contact: "+41 24 481 21 21",
-            notes: "Station-village, vue sur le Léman",
-            shortDesc: "Centre station village, vue Léman unique, Portes du Soleil"
-        },
-        skiResort: {
-            altitude: "1100-2400m",
-            pistes: "650km (Portes du Soleil)",
-            magicPass: true
-        }
-    },
-    {
-        id: 24,
-        name: "Champoussin",
-        region: "Valais - Portes du Soleil",
-        lat: 46.1919,
-        lng: 6.8856,
-        rvParking: {
-            available: true,
-            capacity: 18,
-            winterAccess: true,
-            price: 28,
-            amenities: ["electricity", "water", "toilets"],
-            address: "Parking Central, 1873 Champoussin",
-            contact: "+41 24 477 21 00",
-            notes: "Petit village, connexion Portes du Soleil",
-            shortDesc: "Parking central petit village, connexion Portes du Soleil"
-        },
-        skiResort: {
-            altitude: "1580-2400m",
-            pistes: "650km (Portes du Soleil)",
-            magicPass: true
-        }
-    },
-    {
-        id: 25,
-        name: "Les Crosets",
-        region: "Valais - Portes du Soleil",
-        lat: 46.1869,
-        lng: 6.8294,
-        rvParking: {
-            available: true,
-            capacity: 22,
-            winterAccess: true,
-            price: 34,
+            price: 25,
             amenities: ["electricity", "water", "waste", "toilets"],
-            address: "Route des Crosets, 1873 Les Crosets",
-            contact: "+41 24 477 13 44",
-            notes: "En altitude, ski aux pieds possible",
-            shortDesc: "Route Crosets altitude, ski aux pieds, Portes du Soleil"
+            address: "Parking Central, 1911 Ovronnaz",
+            contact: "+41 27 306 42 93",
+            notes: "Accès direct aux pistes et bains thermaux",
+            shortDesc: "Parking central, accès pistes et bains thermaux d'Ovronnaz"
         },
         skiResort: {
-            altitude: "1650-2466m",
-            pistes: "650km (Portes du Soleil)",
+            altitude: "1340-2466m",
+            pistes: "32km",
             magicPass: true
         }
     },
     {
-        id: 26,
+        id: 13,
         name: "Grimentz",
         region: "Valais - Val d'Anniviers",
-        lat: 46.1828,
-        lng: 7.5731,
+        lat: 46.1756,
+        lng: 7.5678,
         rvParking: {
             available: true,
             capacity: 26,
             winterAccess: true,
-            price: 33,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi"],
-            address: "Parking du Téléphérique, 3961 Grimentz",
+            price: 30,
+            amenities: ["electricity", "water", "waste"],
+            address: "Les Bouesses, Route de Moiry 27, 3961 Grimentz",
             contact: "+41 27 476 17 00",
-            notes: "Village classé, architecture traditionnelle",
-            shortDesc: "Téléphérique village classé, architecture traditionnelle magnifique"
+            notes: "Hiver: 30 CHF/jour taxe incluse, carte Anniviers Liberté offerte, 26 bornes électriques",
+            shortDesc: "Aire Les Bouesses, taxe de séjour incluse avec carte Anniviers Liberté"
         },
         skiResort: {
             altitude: "1570-2900m",
@@ -599,21 +305,21 @@ const skiStations = [
         }
     },
     {
-        id: 27,
+        id: 14,
         name: "Saint-Luc",
         region: "Valais - Val d'Anniviers",
-        lat: 46.2261,
-        lng: 7.6111,
+        lat: 46.2245,
+        lng: 7.6134,
         rvParking: {
             available: true,
-            capacity: 20,
+            capacity: 18,
             winterAccess: true,
             price: 30,
-            amenities: ["electricity", "water", "toilets", "wifi"],
-            address: "Route de Tignousa, 3961 Saint-Luc",
-            contact: "+41 27 476 16 00",
-            notes: "Observatoire astronomique, village ensoleillé",
-            shortDesc: "Route Tignousa ensoleillé, observatoire, Val d'Anniviers"
+            amenities: ["electricity", "water", "waste"],
+            address: "Chandolin - Route d'Echertès, 3961 Chandolin",
+            contact: "+41 27 476 17 00",
+            notes: "Hiver: 30 CHF/jour taxe incluse, 4 bornes 18 prises électriques, carte Anniviers Liberté",
+            shortDesc: "Aire de Chandolin sous l'Auberge Les Choucas, carte Anniviers Liberté"
         },
         skiResort: {
             altitude: "1650-3025m",
@@ -622,76 +328,7 @@ const skiStations = [
         }
     },
     {
-        id: 28,
-        name: "Chandolin",
-        region: "Valais - Val d'Anniviers",
-        lat: 46.2628,
-        lng: 7.5964,
-        rvParking: {
-            available: true,
-            capacity: 15,
-            winterAccess: true,
-            price: 28,
-            amenities: ["electricity", "toilets"],
-            address: "Village, 3967 Chandolin",
-            contact: "+41 27 475 18 38",
-            notes: "Plus haut village avec église, charme authentique",
-            shortDesc: "Village plus haut église, charme authentique altitude"
-        },
-        skiResort: {
-            altitude: "1936-3000m",
-            pistes: "115km",
-            magicPass: true
-        }
-    },
-    {
-        id: 29,
-        name: "Vercorin",
-        region: "Valais",
-        lat: 46.2575,
-        lng: 7.5417,
-        rvParking: {
-            available: true,
-            capacity: 22,
-            winterAccess: true,
-            price: 29,
-            amenities: ["electricity", "water", "waste", "toilets"],
-            address: "Parking des Crêtes, 3967 Vercorin",
-            contact: "+41 27 455 58 55",
-            notes: "Station sans voiture, parking en périphérie",
-            shortDesc: "Parking Crêtes périphérie, station sans voiture, tranquillité"
-        },
-        skiResort: {
-            altitude: "1340-2650m",
-            pistes: "35km",
-            magicPass: true
-        }
-    },
-    {
-        id: 30,
-        name: "Grächen",
-        region: "Valais",
-        lat: 46.1950,
-        lng: 7.8372,
-        rvParking: {
-            available: true,
-            capacity: 30,
-            winterAccess: true,
-            price: 34,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi"],
-            address: "Parking Hannigalp, 3925 Grächen",
-            contact: "+41 27 956 36 06",
-            notes: "Village de montagne sans voiture, parking équipé",
-            shortDesc: "Hannigalp parking équipé, montagne sans voiture, services complets"
-        },
-        skiResort: {
-            altitude: "1619-2868m",
-            pistes: "42km",
-            magicPass: true
-        }
-    },
-    {
-        id: 31,
+        id: 15,
         name: "Saas-Fee",
         region: "Valais - Saastal",
         lat: 46.1089,
@@ -700,12 +337,12 @@ const skiStations = [
             available: true,
             capacity: 45,
             winterAccess: true,
-            price: 38,
+            price: 37,
             amenities: ["electricity", "water", "waste", "toilets", "wifi", "shower"],
-            address: "Parkhaus Alpin Express, 3906 Saas-Fee",
+            address: "Parkhaus Alpin Express P4, 3906 Saas-Fee",
             contact: "+41 27 958 18 58",
-            notes: "Perle des Alpes, village sans voiture, parking moderne",
-            shortDesc: "Parkhaus Alpin Express moderne, Perle des Alpes, village piéton"
+            notes: "30 CHF parking + 7 CHF taxe/personne pour SaastalCard (obligatoire), village sans voiture",
+            shortDesc: "Parkhaus Alpin Express moderne, SaastalCard obligatoire, village piéton"
         },
         skiResort: {
             altitude: "1800-3600m",
@@ -714,67 +351,21 @@ const skiStations = [
         }
     },
     {
-        id: 32,
-        name: "Saas-Grund",
-        region: "Valais - Saastal",
-        lat: 46.1247,
-        lng: 7.9383,
-        rvParking: {
-            available: true,
-            capacity: 28,
-            winterAccess: true,
-            price: 32,
-            amenities: ["electricity", "water", "waste", "toilets", "wifi"],
-            address: "Parking Talstation, 3910 Saas-Grund",
-            contact: "+41 27 958 18 58",
-            notes: "Vallée de Saas, ambiance authentique",
-            shortDesc: "Talstation vallée Saas, ambiance authentique, cadre préservé"
-        },
-        skiResort: {
-            altitude: "1559-3200m",
-            pistes: "35km",
-            magicPass: true
-        }
-    },
-    {
-        id: 33,
-        name: "Bellwald",
-        region: "Valais - Goms",
-        lat: 46.4256,
-        lng: 8.1619,
-        rvParking: {
-            available: true,
-            capacity: 20,
-            winterAccess: true,
-            price: 26,
-            amenities: ["electricity", "water", "toilets"],
-            address: "Parking Richinen, 3997 Bellwald",
-            contact: "+41 27 971 16 84",
-            notes: "Haut-Valais, domaine familial tranquille",
-            shortDesc: "Richinen Goms familial, Haut-Valais, domaine tranquille"
-        },
-        skiResort: {
-            altitude: "1600-2560m",
-            pistes: "40km",
-            magicPass: true
-        }
-    },
-    {
-        id: 34,
+        id: 16,
         name: "Blatten-Belalp",
-        region: "Valais - Aletsch",
-        lat: 46.4172,
-        lng: 7.9817,
+        region: "Valais - Naters",
+        lat: 46.3723,
+        lng: 7.9823,
         rvParking: {
             available: true,
-            capacity: 24,
+            capacity: 10,
             winterAccess: true,
-            price: 30,
-            amenities: ["electricity", "water", "waste", "toilets"],
-            address: "Blatten bei Naters, 3914 Blatten",
+            price: 20,
+            amenities: ["electricity", "water"],
+            address: "Park'n'Sleep Rischinu, Rischinerwald, 3914 Blatten b. Naters",
             contact: "+41 27 921 60 40",
-            notes: "Vue sur le glacier d'Aletsch",
-            shortDesc: "Blatten bei Naters, vue glacier Aletsch, nature exceptionnelle"
+            notes: "Nouvelle station Magic Pass 2025-26, navette gratuite vers télécabine en hiver",
+            shortDesc: "Park'n'Sleep en forêt, navette gratuite vers télécabine"
         },
         skiResort: {
             altitude: "1322-3118m",
@@ -783,71 +374,25 @@ const skiStations = [
         }
     },
     {
-        id: 35,
+        id: 17,
         name: "Unterbäch",
-        region: "Valais",
-        lat: 46.2800,
-        lng: 7.7961,
+        region: "Valais - Raron",
+        lat: 46.3012,
+        lng: 7.8156,
         rvParking: {
             available: true,
-            capacity: 16,
+            capacity: 5,
             winterAccess: true,
-            price: 27,
-            amenities: ["electricity", "water", "toilets"],
-            address: "Dorfzentrum, 3944 Unterbäch",
-            contact: "+41 27 934 56 85",
-            notes: "Village ensoleillé, cadre familial",
-            shortDesc: "Dorfzentrum ensoleillé, village familial, calme assuré"
+            price: 30,
+            amenities: ["electricity", "water", "waste", "toilets", "shower", "wifi"],
+            address: "Seepark Augstbord, 3944 Unterbäch",
+            contact: "+41 27 934 56 00",
+            notes: "30 CHF pour 2 personnes avec taxes incluses, équipement complet, max 8m, réservation recommandée",
+            shortDesc: "Seepark Augstbord avec services complets, réservation recommandée"
         },
         skiResort: {
             altitude: "1230-2350m",
-            pistes: "20km",
-            magicPass: true
-        }
-    },
-    {
-        id: 36,
-        name: "Bruson",
-        region: "Valais - 4 Vallées",
-        lat: 46.0717,
-        lng: 7.2119,
-        rvParking: {
-            available: true,
-            capacity: 18,
-            winterAccess: true,
-            price: 28,
-            amenities: ["electricity", "water", "toilets"],
-            address: "Route de Bruson, 1934 Bruson",
-            contact: "+41 27 776 16 77",
-            notes: "Secteur authentique des 4 Vallées",
-            shortDesc: "Route Bruson authentique, secteur 4 Vallées, hors foule"
-        },
-        skiResort: {
-            altitude: "1080-2700m",
-            pistes: "410km (4 Vallées)",
-            magicPass: true
-        }
-    },
-    {
-        id: 37,
-        name: "Evolène",
-        region: "Valais - Val d'Hérens",
-        lat: 46.1153,
-        lng: 7.5039,
-        rvParking: {
-            available: true,
-            capacity: 14,
-            winterAccess: true,
-            price: 25,
-            amenities: ["electricity", "toilets"],
-            address: "Parking Télécabine, 1983 Evolène",
-            contact: "+41 27 283 40 00",
-            notes: "Village traditionnel, Val d'Hérens",
-            shortDesc: "Télécabine Val d'Hérens, village traditionnel, patrimoine vivant"
-        },
-        skiResort: {
-            altitude: "1370-2450m",
-            pistes: "28km",
+            pistes: "18km",
             magicPass: true
         }
     }

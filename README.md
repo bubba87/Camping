@@ -78,17 +78,17 @@ Pour chaque station, vous trouverez:
 ### Stations MagicPass 2025-2026 avec Équipement Hivernal
 
 #### Fribourg (5 stations)
-1. **La Berra** - 25 CHF/nuit - 25 places - Parking P1 au pied des pistes
-2. **Moléson** - 30 CHF/nuit - 15 places - Plan-Francey, accès funiculaire
+1. **La Berra** - 25 CHF/nuit - 25 places - Le Brandt parking téléphérique
+2. **Moléson** - 30 CHF/nuit - 15 places - Parking Funiculaire 600 places (gratuit hors saison)
 3. **Les Paccots** - 25 CHF/nuit - 20 places - Camping Le Bivouac au bord du lac
-4. **Charmey** - 20 CHF/nuit - 12 places - Parking Télécabine, accès bains thermaux
+4. **Charmey** - 19 CHF/nuit - 10 places - Aire 7 Les Charrières, bon 20 CHF inclus
 5. **Schwarzsee** - 43 CHF/nuit - 18 places - Camping Seeweid au bord du lac
 
 #### Vaud (5 stations)
-6. **Villars-Gryon** - 15 CHF/nuit - 20 places - Barboleuse (hiver), carte Bienvenue incluse
+6. **Villars-Gryon** - 15 CHF/nuit - 3 places - Barboleuse (hiver), carte Bienvenue incluse
 7. **Leysin** - 14 CHF/nuit - 15 places - Place des Feuilles (10 CHF + 3.80 CHF/pers)
 8. **Les Mosses-La Lécherette** - 15 CHF/nuit - 10 places - Col des Mosses
-9. **Château-d'Oex** - 24 CHF/nuit - 25 places - Camping Le Berceau (15+9+3+4 CHF)
+9. **Château-d'Oex** - 31 CHF/nuit - 25 places - Camping Le Berceau 3★ (15+9+3+4 CHF)
 10. **Les Pléiades** - 10 CHF/nuit - 8 places - Parking panoramique vue Léman
 
 #### Valais (8 stations)
@@ -98,25 +98,28 @@ Pour chaque station, vous trouverez:
 14. **Saint-Luc** - 30 CHF/nuit - 18 places - Chandolin Echertès, carte Anniviers Liberté
 15. **Saas-Fee** - 37 CHF/nuit - 45 places - Parkhaus P4 (30+7 CHF)
 16. **Saas-Almagell** - 9 CHF/nuit - 60 places - Parking Bilgersche (9 CHF pour 2 pers)
-17. **Blatten-Belalp** - 20 CHF/nuit - 10 places - Park'n'Sleep Rischinu (NOUVEAU 2025-26)
+17. **Blatten-Belalp** - 5 CHF/nuit - 200 places - Parkplatz Rischinen + bus gratuit (NOUVEAU 2025-26)
 18. **Unterbäch** - 30 CHF/nuit - 5 places - Seepark Augstbord (30 CHF pour 2 pers)
 
 ### Tarifs Moyens
-- **Prix moyen**: 22 CHF/nuit
-- **Prix minimum**: 6 CHF/nuit (Anzère parking, hors taxe séjour 5.50 CHF/adulte)
-- **Meilleur rapport qualité/prix**: 9 CHF/nuit (Saas-Almagell pour 2 pers taxes incluses)
+- **Prix moyen**: 21 CHF/nuit
+- **Prix minimum**: 5 CHF/jour (Blatten-Belalp Parkplatz Rischinen 200 places + bus gratuit!)
+- **Meilleur rapport qualité/prix nuit**: 9 CHF/nuit (Saas-Almagell pour 2 pers taxes incluses)
 - **Prix maximum**: 43 CHF/nuit (Schwarzsee camping)
-- **Capacité totale**: ~327 places de camping-car
+- **Capacité totale**: ~512 places de camping-car
 
 ### Notes Importantes sur les Prix
 - Les prix indiqués peuvent inclure ou non les taxes de séjour selon les stations
+- **Blatten-Belalp**: 5 CHF/jour NOUVEAU 2025-26! Grand parking 200 places + Sportbus GRATUIT vers télécabine
+- **Saas-Almagell**: 9 CHF pour 2 pers taxes incluses - MEILLEUR PRIX NUIT! 60 places
 - **Anzère**: 6 CHF parking + taxe séjour 5.50 CHF/adulte, 2.75 CHF/enfant = ~12 CHF total
-- **Saas-Almagell**: 9 CHF pour 2 pers taxes incluses - MEILLEUR PRIX! 60 places
 - **Gryon/Villars**: Hiver uniquement aire de Barboleuse, 2-3 places (travaux), 15 CHF pour 2 pers taxes incluses + 2 CHF élec
 - **Leysin**: 10 CHF + 3.80 CHF/personne = ~14 CHF total, max 5 nuits
+- **Charmey**: 19 CHF pour 2 pers + bon 20 CHF commerces locaux inclus
+- **Moléson**: Parking funiculaire 600 places, GRATUIT hors saison
 - **Saas-Fee**: 30 CHF parking + 7 CHF/personne pour SaastalCard (obligatoire) = ~37 CHF total
 - **Grimentz & Saint-Luc**: 30 CHF/jour en hiver, taxe incluse + carte Anniviers Liberté
-- **Château-d'Oex**: 15 CHF emplacement + 9 CHF/adulte + 3 CHF taxe + 4 CHF élec = 31 CHF total
+- **Château-d'Oex**: Camping 3★ 15 CHF emplacement + 9 CHF/adulte + 3 CHF taxe + 4 CHF élec = 31 CHF total
 
 ## 🛠️ Technologies Utilisées
 

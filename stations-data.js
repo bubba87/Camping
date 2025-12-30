@@ -419,5 +419,28 @@ const skiStations = [
             pistes: "18km",
             magicPass: true
         }
+    },
+    {
+        id: 19,
+        name: "Zinal",
+        region: "Valais - Val d'Anniviers",
+        lat: 46.1384,
+        lng: 7.6251,
+        rvParking: {
+            available: true,
+            capacity: 15,
+            winterAccess: true,
+            price: 30,
+            amenities: ["electricity", "water", "waste"],
+            address: "Parking Montferrier Nord, Le Perrec, 3961 Zinal",
+            contact: "+41 27 476 17 00",
+            notes: "Hiver: 30 CHF/jour (15 CHF été), taxe incluse avec carte Anniviers Liberté (50% téléphériques + bus gratuit). À 2 min centre et télécabine",
+            shortDesc: "Parking Montferrier à 2min de la télécabine, carte Anniviers Liberté incluse"
+        },
+        skiResort: {
+            altitude: "1670-2900m",
+            pistes: "115km (Grimentz-Zinal)",
+            magicPass: true
+        }
     }
 ];

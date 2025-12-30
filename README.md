@@ -5,8 +5,8 @@ Carte interactive recensant les stations de ski **MagicPass 2025-2026** proposan
 ## 📋 Caractéristiques
 
 ### Stations Incluses
-- **18 stations de ski** partenaires MagicPass 2025-2026
-- Régions: Fribourg (5), Vaud (5), Valais (8)
+- **19 stations de ski** partenaires MagicPass 2025-2026
+- Régions: Fribourg (5), Vaud (5), Valais (9)
 - **Toutes avec accès hivernal garanti pour camping-cars**
 - Équipements et services hivernaux confirmés
 - **Coordonnées GPS pointant vers les parkings camping-car**
@@ -91,22 +91,23 @@ Pour chaque station, vous trouverez:
 9. **Château-d'Oex** - 31 CHF/nuit - 25 places - Camping Le Berceau 3★ (15+9+3+4 CHF)
 10. **Les Pléiades** - 10 CHF/nuit - 8 places - Parking panoramique vue Léman
 
-#### Valais (8 stations)
+#### Valais (9 stations)
 11. **Anzère** - 6 CHF/nuit - 15 places - Parking de l'Avenir (taxe séjour 5.50 CHF/pers)
 12. **Ovronnaz** - 25 CHF/nuit - 20 places - Parking Central, accès bains thermaux
 13. **Grimentz** - 30 CHF/nuit - 26 places - Les Bouesses, carte Anniviers Liberté
 14. **Saint-Luc** - 30 CHF/nuit - 18 places - Chandolin Echertès, carte Anniviers Liberté
-15. **Saas-Fee** - 37 CHF/nuit - 45 places - Parkhaus P4 (30+7 CHF)
-16. **Saas-Almagell** - 9 CHF/nuit - 60 places - Parking Bilgersche (9 CHF pour 2 pers)
-17. **Blatten-Belalp** - 5 CHF/nuit - 200 places - Parkplatz Rischinen + bus gratuit (NOUVEAU 2025-26)
-18. **Unterbäch** - 30 CHF/nuit - 5 places - Seepark Augstbord (30 CHF pour 2 pers)
+15. **Zinal** - 30 CHF/nuit - 15 places - Parking Montferrier, carte Anniviers Liberté (AJOUTÉ!)
+16. **Saas-Fee** - 37 CHF/nuit - 45 places - Parkhaus P4 (30+7 CHF)
+17. **Saas-Almagell** - 9 CHF/nuit - 60 places - Parking Bilgersche (9 CHF pour 2 pers)
+18. **Blatten-Belalp** - 5 CHF/nuit - 200 places - Parkplatz Rischinen + bus gratuit (NOUVEAU 2025-26)
+19. **Unterbäch** - 30 CHF/nuit - 5 places - Seepark Augstbord (30 CHF pour 2 pers)
 
 ### Tarifs Moyens
 - **Prix moyen**: 21 CHF/nuit
 - **Prix minimum**: 5 CHF/jour (Blatten-Belalp Parkplatz Rischinen 200 places + bus gratuit!)
 - **Meilleur rapport qualité/prix nuit**: 9 CHF/nuit (Saas-Almagell pour 2 pers taxes incluses)
 - **Prix maximum**: 43 CHF/nuit (Schwarzsee camping)
-- **Capacité totale**: ~512 places de camping-car
+- **Capacité totale**: ~527 places de camping-car
 
 ### Notes Importantes sur les Prix
 - Les prix indiqués peuvent inclure ou non les taxes de séjour selon les stations
@@ -118,7 +119,7 @@ Pour chaque station, vous trouverez:
 - **Charmey**: 19 CHF pour 2 pers + bon 20 CHF commerces locaux inclus
 - **Moléson**: Parking funiculaire 600 places, GRATUIT hors saison
 - **Saas-Fee**: 30 CHF parking + 7 CHF/personne pour SaastalCard (obligatoire) = ~37 CHF total
-- **Grimentz & Saint-Luc**: 30 CHF/jour en hiver, taxe incluse + carte Anniviers Liberté
+- **Grimentz, Saint-Luc & Zinal**: 30 CHF/jour en hiver (15 CHF été pour Zinal), taxe incluse + carte Anniviers Liberté (50% téléphériques + bus gratuit)
 - **Château-d'Oex**: Camping 3★ 15 CHF emplacement + 9 CHF/adulte + 3 CHF taxe + 4 CHF élec = 31 CHF total
 
 ## 🛠️ Technologies Utilisées
@@ -222,6 +223,9 @@ Pour ajouter une nouvelle station, modifiez `stations-data.js`:
 - ⚠️ Evolène/Arolla (camping été, interdit hiver hors camping, amende 500 CHF)
 - ⚠️ Jaun (aire camping-car fermée en hiver)
 - ⚠️ Les Diablerets (Lac Retaud ouvert mai-octobre uniquement)
+- ⚠️ Les Marécottes/Salvan (Camping Médettaz accès très difficile/étroit pour camping-cars)
+- ⚠️ Lauchernalp/Lötschental (Wiler refuse camping-cars depuis 2024, autres campings été seulement)
+- ⚠️ Leukerbad (Camping Sportarena fermé hiver, parking avec amendes 100 CHF)
 
 ### Conseils
 - Arrivez tôt pour garantir une place
